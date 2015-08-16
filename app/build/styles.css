@@ -1,3 +1,11 @@
+header {
+  float: left;
+  overflow: visible;
+  position: relative;
+  width: 100%;
+  z-index: 1000;
+  margin-bottom: 60px; }
+
 button:focus {
   outline: 0 !important; }
 
@@ -19,41 +27,26 @@ body {
 .themeColor1 {
   color: #D46120; }
 
-.topbar {
-  font-size: 20px;
-  background: none repeat scroll 0 0 #3a3a3a;
-  float: left;
-  width: 100%;
-  height: 40px; }
-  .topbar i {
-    color: #D46120;
-    font-size: 14px;
-    margin-right: 10px; }
-  .topbar ul {
-    list-style-type: none; }
-  .topbar li {
-    color: #d8d8d8;
-    float: left;
-    font-size: 11px;
-    margin-right: 30px;
-    padding-right: 30px;
-    letter-spacing: 0.3px;
-    position: relative; }
-  .topbar .inline-list {
-    float: left;
-    list-style: outside none none;
-    margin: 0 0 0 30px;
-    padding: 12px 0; }
+.navButton {
+  border-width: 0;
+  padding: 10px;
+  width: 100px;
+  color: #0D4D7C;
+  background-color: rgba(255, 255, 255, 0);
+  text-transform: capitalize; }
 
-.navbar {
-  background-color: black; }
-  .navbar .navButton {
-    border-width: 0;
-    padding: 10px;
-    width: 100px;
-    color: white;
-    background-color: black;
-    text-transform: capitalize; }
+.topbar {
+  position: fixed;
+  background-color: rgba(233, 233, 233, 0.94);
+  z-index: 10;
+  width: 100%; }
 
 .homepage {
   min-height: 1000px; }
+  .homepage .CarouselBoxIn {
+    padding-top: 40px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 900px; }
+  .homepage .CarouselBoxOut {
+    background-color: #DEFFEB; }
