@@ -1,0 +1,41 @@
+{
+  "name": "gochina",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daichuqi/gochina.git"
+  },
+  "author": "Chuqi Dai",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daichuqi/gochina/issues"
+  },
+  "homepage": "https://github.com/daichuqi/gochina#readme",
+  "dependencies": {
+    "body-parser": "^1.13.3",
+    "express": "^4.13.3",
+    "lodash": "^3.10.1",
+    "react": "^0.13.3",
+    "react-bootstrap": "^0.24.5",
+    "react-router": "^0.13.3",
+    "serve-favicon": "^2.3.0"
+  },
+  "devDependencies": {
+    "babelify": "^6.1.3",
+    "browserify": "^11.0.1",
+    "gulp": "^3.9.0",
+    "gulp-babel": "^5.2.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-nodemon": "^2.0.3",
+    "gulp-sass": "^2.0.4",
+    "gulp-sourcemaps": "^1.5.2",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.3.1"
+  }
+}
