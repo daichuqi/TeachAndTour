@@ -9,8 +9,8 @@ class Footer extends React.Component {
   render() {
     return (
       <div className="footer">
-        <div className="footerTitle">Find Us On</div>
         <hr className="footer-divider" />
+        <div className="footerTitle">Find Us On</div>
         <div>
           <ul>
             <li><a href="#"  className="footer-container"><i className="fa fa-facebook"></i></a></li>

@@ -103,12 +103,12 @@ var Footer = (function (_React$Component) {
       return _react2['default'].createElement(
         'div',
         { className: 'footer' },
+        _react2['default'].createElement('hr', { className: 'footer-divider' }),
         _react2['default'].createElement(
           'div',
           { className: 'footerTitle' },
           'Find Us On'
         ),
-        _react2['default'].createElement('hr', { className: 'footer-divider' }),
         _react2['default'].createElement(
           'div',
           null,

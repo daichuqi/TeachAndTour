@@ -8,10 +8,11 @@ var babel = require('babelify');
 var sass = require('gulp-sass');
 var concat = require('gulp-concat');
 var nodemon = require('gulp-nodemon');
+var jshint = require('gulp-jshint');
+var jshintReporter = require('jshint-stylish');
 
 function compile(watch) {
   var bundler = watchify(browserify('./app/client.js', { debug: true }).transform(babel));
-
   function rebundle() {
     bundler.bundle()
       .on('error', function(err) { console.error(err); this.emit('end'); })
@@ -27,7 +28,6 @@ function compile(watch) {
       rebundle();
     });
   }
-
   rebundle();
 }
 
@@ -57,9 +57,18 @@ gulp.task('watch', function() {
   return watch();
 });
 
+gulp.task('lint', function(){
+  var paths = {
+    'src':['./app/js/**/*.js','package.json']
+  };
+  gulp.src(paths.src)
+    .pipe(jshint())
+    .pipe(jshint.reporter(jshintReporter));
+});
+
 
 gulp.task('default', ['build','sass','watch']);
-gulp.task('test', ['mocha']);
+gulp.task('test', ['lint']);
 
 
 

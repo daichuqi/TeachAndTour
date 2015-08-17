@@ -77,7 +77,9 @@ hr {
     margin-bottom: 20px;
     border-color: rgba(255, 255, 255, 0.2); }
   .footer .footerTitle {
-    font-size: 20px; }
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 15px; }
   .footer .footer-container {
     margin: 5px;
     display: block;
@@ -88,6 +90,8 @@ hr {
     border-style: solid;
     border-radius: 50%;
     text-align: center; }
+  .footer .footer-container:hover {
+    background-color: black; }
   .footer ul {
     list-style-type: none;
     margin: 0;
