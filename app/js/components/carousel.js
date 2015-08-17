@@ -24,7 +24,7 @@ const ControlledCarousel = React.createClass({
     return (
       <Carousel activeIndex={this.state.index} direction={this.state.direction} onSelect={this.handleSelect}>
         <CarouselItem>
-          <img width={900} height={500} alt='900x500' src={img[0]}/>
+          <img className="bannerImg" src={img[0]}/>
         </CarouselItem>
       </Carousel>
     );

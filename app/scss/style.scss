@@ -7,13 +7,23 @@ header{
     z-index: 1000;
     margin-bottom: 60px;
 }
-button:focus {outline:0 !important;}
-body{
-  margin: 0;
+html,
+body {
+  margin:0;
+  padding:0;
+  height:100%;
   font-size: 14px;
   line-height: 1.42857143;
   color: #333;
 }
+button:focus {outline:0 !important;}
+
+
+hr {
+  border: 0;
+  border-top: 1px solid #dce0e0;
+}
+
 .fa{
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
@@ -44,31 +54,76 @@ body{
 
 .topbar{
     position: fixed;
-    background-color: rgba(233, 233, 233, 0.94);
+    background-color: rgba(255, 255, 255, 0.94);
     z-index: 10;
     width: 100%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 //================ Home  ================//
 
 .homepage {
-
-
   .CarouselBoxIn{
     padding-top: 40px;
     margin-right: auto;
     margin-left: auto;
-    width: 900px;
+    width: 100%;
   }
   .CarouselBoxOut{
-    background-color: #DEFFEB;
-
+    width: inherit;
+    background-color: rgba(0, 0, 0, 0.76);
+  }
+  .bannerImg{
+    width: 100%;
   }
   min-height: 1000px;
 }
+//================ Footer  ================//
 
 
-
-
+.footer {
+    width:100%;
+    left:0;
+    bottom: 0;
+    height: 150px;
+    background-color: #2B2B2B;
+    color: #ECECEC;
+    text-align: center;
+    padding-left: 100px;
+    padding-right: 100px;
+    .footer-divider{
+      margin-top: 30px;
+      margin-bottom: 20px;
+      border-color: rgba(255,255,255,0.2);
+    }
+    .footerTitle{
+      font-size: 20px
+    }
+    .footer-container{
+      margin: 5px;
+      display: block;
+      height: 36px;
+      width: 36px;
+      border-color: white;
+      border-width: 1px;
+      border-style: solid;
+      border-radius: 50%;
+      text-align: center;
+    }
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    li {
+      display: inline-block;
+      padding: 0 5px;
+      color: white;
+    }
+    i{
+      margin-top: 9px;
+      color: white;
+    }
+}
 
 
 
