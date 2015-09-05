@@ -5,20 +5,21 @@ import {Carousel,CarouselItem} from 'react-bootstrap';
 
 var img = ['../assets/images/bg1.jpg'];
 
-const ControlledCarousel = React.createClass({
-  getInitialState() {
-    return {
+class ControlledCarousel extends React.Component{
+  constructor(){
+    super();
+    this.state = {
       index: 0,
       direction: null
-    };
-  },
+    }
+  }
 
-  handleSelect(selectedIndex, selectedDirection) {
+  handleSelect(selectedIndex, selectedDirection){
     this.setState({
       index: selectedIndex,
       direction: selectedDirection
-    });
-  },
+    })
+  }
 
   render() {
     return (
@@ -29,7 +30,7 @@ const ControlledCarousel = React.createClass({
       </Carousel>
     );
   }
-});
+}
 
 
 
