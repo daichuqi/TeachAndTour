@@ -21,11 +21,13 @@
     "body-parser": "^1.13.3",
     "bootstrap": "^3.3.5",
     "express": "^4.13.3",
+    "flux": "^2.1.1",
     "lodash": "^3.10.1",
     "react": "^0.13.3",
     "react-bootstrap": "^0.24.5",
     "react-router": "^0.13.3",
     "react-sticky": "^2.4.0",
+    "react-waypoint": "^1.0.3",
     "serve-favicon": "^2.3.0"
   },
   "devDependencies": {
