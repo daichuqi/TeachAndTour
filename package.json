@@ -1,5 +1,5 @@
 {
-  "name": "gochina",
+  "name": "TeachAndTour",
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/daichuqi/gochina.git"
+    "url": "git+https://github.com/daichuqi/TeachAndTour.git"
   },
   "author": "Chuqi Dai",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/daichuqi/gochina/issues"
+    "url": "https://github.com/daichuqi/TeachAndTour/issues"
   },
-  "homepage": "https://github.com/daichuqi/gochina#readme",
+  "homepage": "https://github.com/daichuqi/TeachAndTour#readme",
   "dependencies": {
     "body-parser": "^1.13.3",
     "bootstrap": "^3.3.5",
