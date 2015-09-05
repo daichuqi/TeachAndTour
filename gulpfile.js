@@ -8,8 +8,6 @@ var babel = require('babelify');
 var sass = require('gulp-sass');
 var concat = require('gulp-concat');
 var nodemon = require('gulp-nodemon');
-var jshint = require('gulp-jshint');
-var jshintReporter = require('jshint-stylish');
 
 function compile(watch) {
   var bundler = watchify(browserify('./app/client.js', { debug: true }).transform(babel));
@@ -55,15 +53,6 @@ gulp.task('watch', function() {
   , env: { 'NODE_ENV': 'development' }
   })
   return watch();
-});
-
-gulp.task('lint', function(){
-  var paths = {
-    'src':['./app/js/**/*.js','package.json']
-  };
-  gulp.src(paths.src)
-    .pipe(jshint())
-    .pipe(jshint.reporter(jshintReporter));
 });
 
 
