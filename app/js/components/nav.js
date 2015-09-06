@@ -1,8 +1,10 @@
 'use strict';
 import React from 'react';
 import Router from 'react-router';
+import LoginModal from './loginmodal';
 
 import HomeStore from '../stores/homeStore';
+import ModalStore from '../stores/modalStore';
 
 class LoginButton extends React.Component {
   constructor() {
@@ -16,25 +18,25 @@ class LoginButton extends React.Component {
     }
   }
   componentDidMount() {
-    // ModalStore.addChangeListener(this.close);
+    ModalStore.addChangeListener(this.close);
     // ModalStore.addOpenListener(this.open);
   }
   componentWillUnmount() {
-    // ModalStore.removeChangeListener(this.close);
+    ModalStore.removeChangeListener(this.close);
     // ModalStore.removeOpenListener(this.open);
   }
   open(){
-    // this.setState({open:true})
+    this.setState({open:true})
   }
   close(){
-    // this.setState({open:false})
+    this.setState({open:false})
   }
 
   render() {
     return (
-      <div className="loginButton" onClick={this.open}>Login
+      <button className="loginButton" onClick={this.open}>Login
         <LoginModal show={this.state.open}/>
-      </div>
+      </button>
     );
   }
 };
@@ -69,6 +71,7 @@ class Nav extends React.Component {
             <Router.Link to="maps"><button className="navButton">maps</button></Router.Link>
             <Router.Link to="news"><button className="navButton">news</button></Router.Link>
             <Router.Link to="join-us"><button className="navButton">join</button></Router.Link>
+            <LoginButton />
           </nav>
         </div>
 
