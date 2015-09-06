@@ -41,7 +41,11 @@ class LoginButton extends React.Component {
 
   render() {
     return (
-      <button className={this.state.header? 'bigheaderlogin loginbutton' : 'smallheaderlogin loginbutton'} onClick={this.open}>Login
+      <button className={this.state.header? 'bigheaderlogin loginbutton' : 'smallheaderlogin loginbutton'} onClick={this.open}>
+
+        <i className="fa fa-power-off" ></i>
+        <span> Login</span>
+
         <LoginModal className="modal" show={this.state.open}/>
       </button>
     );

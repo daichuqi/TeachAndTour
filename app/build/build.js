@@ -825,7 +825,12 @@ var LoginButton = (function (_React$Component) {
       return _react2['default'].createElement(
         'button',
         { className: this.state.header ? 'bigheaderlogin loginbutton' : 'smallheaderlogin loginbutton', onClick: this.open },
-        'Login',
+        _react2['default'].createElement('i', { className: 'fa fa-power-off' }),
+        _react2['default'].createElement(
+          'span',
+          null,
+          ' Login'
+        ),
         _react2['default'].createElement(_loginmodal2['default'], { className: 'modal', show: this.state.open })
       );
     }
