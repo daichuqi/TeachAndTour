@@ -9,7 +9,7 @@ import assign from 'object-assign';
 const ActionType = Constants.ActionTypes;
 const CHANGE_EVENT = 'change';
 
-var _header = 'bigheader'
+var _header = true;
 
 let setHeaderState = function (headerState) {
   _header = headerState;

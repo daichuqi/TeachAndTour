@@ -14,13 +14,11 @@ class Home extends React.Component {
   }
 
   _handleWaypointEnter(){
-    HomeAction.resizeHeader('bigheader');
+    HomeAction.resizeHeader(true);
   }
-
   _handleWaypointLeave(){
-    HomeAction.resizeHeader('smallheader');
+    HomeAction.resizeHeader(false);
   }
-
 
   render() {
     return (
@@ -37,4 +35,3 @@ class Home extends React.Component {
 }
 
 export default Home;
-

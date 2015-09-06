@@ -289,12 +289,12 @@ var Home = (function (_React$Component) {
   _createClass(Home, [{
     key: '_handleWaypointEnter',
     value: function _handleWaypointEnter() {
-      _actionsHomeActionCreators2['default'].resizeHeader('bigheader');
+      _actionsHomeActionCreators2['default'].resizeHeader(true);
     }
   }, {
     key: '_handleWaypointLeave',
     value: function _handleWaypointLeave() {
-      _actionsHomeActionCreators2['default'].resizeHeader('smallheader');
+      _actionsHomeActionCreators2['default'].resizeHeader(false);
     }
   }, {
     key: 'render',
@@ -796,12 +796,14 @@ var LoginButton = (function (_React$Component) {
     _classCallCheck(this, LoginButton);
 
     _get(Object.getPrototypeOf(LoginButton.prototype), 'constructor', this).call(this);
+    this.changeHeaderState = this.changeHeaderState.bind(this);
     this.componentDidMount = this.componentDidMount.bind(this);
     this.componentWillUnmount = this.componentWillUnmount.bind(this);
     this.open = this.open.bind(this);
     this.close = this.close.bind(this);
     this.state = {
-      open: false
+      open: false,
+      header: false
     };
   }
 
@@ -809,13 +811,20 @@ var LoginButton = (function (_React$Component) {
     key: 'componentDidMount',
     value: function componentDidMount() {
       _storesModalStore2['default'].addChangeListener(this.close);
+      _storesHomeStore2['default'].addChangeListener(this.changeHeaderState);
       // ModalStore.addOpenListener(this.open);
     }
   }, {
     key: 'componentWillUnmount',
     value: function componentWillUnmount() {
       _storesModalStore2['default'].removeChangeListener(this.close);
+      _storesHomeStore2['default'].removeChangeListener(this.changeHeaderState);
       // ModalStore.removeOpenListener(this.open);
+    }
+  }, {
+    key: 'changeHeaderState',
+    value: function changeHeaderState() {
+      this.setState({ header: _storesHomeStore2['default'].getHeaderState() });
     }
   }, {
     key: 'open',
@@ -832,9 +841,9 @@ var LoginButton = (function (_React$Component) {
     value: function render() {
       return _react2['default'].createElement(
         'button',
-        { className: 'loginButton', onClick: this.open },
+        { className: this.state.header ? 'bigheaderlogin loginbutton' : 'smallheaderlogin loginbutton', onClick: this.open },
         'Login',
-        _react2['default'].createElement(_loginmodal2['default'], { show: this.state.open })
+        _react2['default'].createElement(_loginmodal2['default'], { className: 'modal', show: this.state.open })
       );
     }
   }]);
@@ -855,7 +864,7 @@ var Nav = (function (_React$Component2) {
     this.componentDidMount = this.componentDidMount.bind(this);
     this.componentWillUnmount = this.componentWillUnmount.bind(this);
     this.state = {
-      header: 'bigheader'
+      bigheader: true
     };
   }
 
@@ -882,7 +891,7 @@ var Nav = (function (_React$Component2) {
         null,
         _react2['default'].createElement(
           'div',
-          { className: this.state.header },
+          { className: this.state.header ? 'bigheader' : 'smallheader' },
           _react2['default'].createElement(
             'nav',
             null,
@@ -927,7 +936,7 @@ var Nav = (function (_React$Component2) {
                 'join'
               )
             ),
-            _react2['default'].createElement(LoginButton, null)
+            _react2['default'].createElement(LoginButton, { className: 'loginButton' })
           )
         )
       );
@@ -1150,7 +1159,7 @@ var _objectAssign2 = _interopRequireDefault(_objectAssign);
 var ActionType = _constantsConstants2['default'].ActionTypes;
 var CHANGE_EVENT = 'change';
 
-var _header = 'bigheader';
+var _header = true;
 
 var setHeaderState = function setHeaderState(headerState) {
   _header = headerState;

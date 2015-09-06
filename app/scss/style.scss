@@ -41,6 +41,14 @@ hr {
 }
 
 
+//================= modal  =================//
+
+.modal {
+  margin-top: 140px;
+    text-align: left;
+    vertical-align: middle;
+}
+
 //=============== Nav Bar ===============//
 
 .navButton{
@@ -52,18 +60,34 @@ hr {
   text-transform: capitalize;
 }
 
-.loginButton{
-  border-width: 0;
-  float: right;
-  padding: 10px;
-  margin-right: 30px;
-  margin-top: 30px;
-  width: 100px;
-  border-radius: 10px;
-  font-size: 18px;
-  color: #FFFFFF;
-  background-color: #56c2f0;
-  text-transform: capitalize;
+.loginbutton{
+    border-width: 0;
+    float: right;
+    padding: 5px;
+    margin-right: 30px;
+    width: 80px;
+    border-radius: 10px;
+    font-size: 18px;
+    color: #FFFFFF;
+    background-color: #56c2f0;
+    text-transform: capitalize;
+}
+
+.loginbutton:hover{
+  transition: background-color 0.2s;
+  background-color: #1B6585;
+}
+
+
+.bigheaderlogin{
+    transition: margin-top 0.3s;
+    margin-top: 30px;
+
+}
+
+.smallheaderlogin{
+    transition: margin-top 0.3s;
+    margin-top: 15px;
 }
 
 .bigheader{
@@ -101,7 +125,7 @@ hr {
 
 .homepage {
   .CarouselBoxIn{
-    padding-top: 40px;
+    padding-top: 100px;
     margin-right: auto;
     margin-left: auto;
     width: 100%;

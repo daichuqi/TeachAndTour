@@ -34,6 +34,11 @@ hr {
 .themeColor1 {
   color: #D46120; }
 
+.modal {
+  margin-top: 140px;
+  text-align: left;
+  vertical-align: middle; }
+
 .navButton {
   border-width: 0;
   padding: 10px;
@@ -42,18 +47,29 @@ hr {
   background-color: rgba(255, 255, 255, 0);
   text-transform: capitalize; }
 
-.loginButton {
+.loginbutton {
   border-width: 0;
   float: right;
-  padding: 10px;
+  padding: 5px;
   margin-right: 30px;
-  margin-top: 30px;
-  width: 100px;
+  width: 80px;
   border-radius: 10px;
   font-size: 18px;
   color: #FFFFFF;
   background-color: #56c2f0;
   text-transform: capitalize; }
+
+.loginbutton:hover {
+  transition: background-color 0.2s;
+  background-color: #1B6585; }
+
+.bigheaderlogin {
+  transition: margin-top 0.3s;
+  margin-top: 30px; }
+
+.smallheaderlogin {
+  transition: margin-top 0.3s;
+  margin-top: 15px; }
 
 .bigheader {
   transition: height 0.3s;
@@ -86,7 +102,7 @@ hr {
 .homepage {
   min-height: 2000px; }
   .homepage .CarouselBoxIn {
-    padding-top: 40px;
+    padding-top: 100px;
     margin-right: auto;
     margin-left: auto;
     width: 100%; }
