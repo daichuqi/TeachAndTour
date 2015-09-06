@@ -100,7 +100,7 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactBootstrap = require('react-bootstrap');
 
-var img = ['../assets/images/bg1.jpg'];
+var img = ['../assets/images/bg2.jpg'];
 
 var ControlledCarousel = (function (_React$Component) {
   _inherits(ControlledCarousel, _React$Component);
@@ -132,7 +132,27 @@ var ControlledCarousel = (function (_React$Component) {
         _react2['default'].createElement(
           _reactBootstrap.CarouselItem,
           null,
-          _react2['default'].createElement('img', { className: 'bannerImg', src: img[0] })
+          _react2['default'].createElement('img', { className: 'bannerImg', src: img[0] }),
+          _react2['default'].createElement(
+            'div',
+            { className: 'carousel-caption' },
+            _react2['default'].createElement(
+              'div',
+              { className: 'carousel-title' },
+              'Explore China by teaching English'
+            ),
+            _react2['default'].createElement(
+              'span',
+              { className: 'imageLocation' },
+              _react2['default'].createElement('i', { className: 'fa fa-map-marker' }),
+              ' Shanghai China'
+            ),
+            _react2['default'].createElement(
+              'p',
+              null,
+              'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+            )
+          )
         )
       );
     }
@@ -302,13 +322,13 @@ var Home = (function (_React$Component) {
       return _react2['default'].createElement(
         'div',
         { className: 'homepage' },
+        _react2['default'].createElement(_reactWaypoint2['default'], { onEnter: this._handleWaypointEnter, onLeave: this._handleWaypointLeave, threshold: 0 }),
         _react2['default'].createElement(
           'div',
           { className: 'CarouselBoxOut' },
           _react2['default'].createElement(
             'div',
             { className: 'CarouselBoxIn' },
-            _react2['default'].createElement(_reactWaypoint2['default'], { onEnter: this._handleWaypointEnter, onLeave: this._handleWaypointLeave, threshold: 0.1 }),
             _react2['default'].createElement(_carousel2['default'], { bsSize: 'large' })
           )
         )
