@@ -38,13 +38,12 @@ class Login extends React.Component {
     return (
         <div className="AuthForm" onKeyDown={this.handleKeyDown}>
           <div className="modalButtonBox3">
-            <p><input type="text" placeholder="Username" ref="username" /></p>
-            <p><input type="password" placeholder="Password" ref="password" /></p>
+            <input type="text" placeholder="Username" ref="username" />
+            <input type="password" placeholder="Password" ref="password" />
           </div>
           <hr></hr>
           <div className="modalButtonBox">
-            <input className="topButton aboutButton" type="button" value="Login"
-            onClick={this.handleLogin}/>
+            <button className="modalLoginButton" onClick={this.handleLogin} >Login</button>
           </div>
           <div className="modalButtonBox2">
             <a onClick={this.toggleAuth}>Don't Have an Account?</a>
@@ -96,15 +95,15 @@ class Signup extends React.Component {
     return (
         <div className="AuthForm">
         <div className="modalButtonBox3">
-          <p><input type="text" placeholder="Username" ref="username" /></p>
-          <p><input type="password" placeholder="Password" ref="password" /></p>
-          <p><input type="password" placeholder="Verify password" ref="verpassword" /></p>
-          <p><input type="email" placeholder="Email" ref="email" /></p>
+          <input type="text" placeholder="Username" ref="username" />
+          <input type="password" placeholder="Password" ref="password" />
+          <input type="password" placeholder="Verify password" ref="verpassword" />
+          <input type="email" placeholder="Email" ref="email" />
         </div>
 
           <hr></hr>
           <div className="modalButtonBox">
-            <input className="topButton aboutButton" type="button" value="Signup" onClick={this.handleSignup}/>
+            <button className="modalSignupButton" onClick={this.handleSignup} >Signup</button>
           </div>
            <div className="modalButtonBox2">
              <a onClick={this.toggleAuth}>Already Have an Account?</a>

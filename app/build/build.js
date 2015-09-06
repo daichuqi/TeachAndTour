@@ -505,23 +505,18 @@ var Login = (function (_React$Component) {
         _react2['default'].createElement(
           'div',
           { className: 'modalButtonBox3' },
-          _react2['default'].createElement(
-            'p',
-            null,
-            _react2['default'].createElement('input', { type: 'text', placeholder: 'Username', ref: 'username' })
-          ),
-          _react2['default'].createElement(
-            'p',
-            null,
-            _react2['default'].createElement('input', { type: 'password', placeholder: 'Password', ref: 'password' })
-          )
+          _react2['default'].createElement('input', { type: 'text', placeholder: 'Username', ref: 'username' }),
+          _react2['default'].createElement('input', { type: 'password', placeholder: 'Password', ref: 'password' })
         ),
         _react2['default'].createElement('hr', null),
         _react2['default'].createElement(
           'div',
           { className: 'modalButtonBox' },
-          _react2['default'].createElement('input', { className: 'topButton aboutButton', type: 'button', value: 'Login',
-            onClick: this.handleLogin })
+          _react2['default'].createElement(
+            'button',
+            { className: 'modalLoginButton', onClick: this.handleLogin },
+            'Login'
+          )
         ),
         _react2['default'].createElement(
           'div',
@@ -589,32 +584,20 @@ var Signup = (function (_React$Component2) {
         _react2['default'].createElement(
           'div',
           { className: 'modalButtonBox3' },
-          _react2['default'].createElement(
-            'p',
-            null,
-            _react2['default'].createElement('input', { type: 'text', placeholder: 'Username', ref: 'username' })
-          ),
-          _react2['default'].createElement(
-            'p',
-            null,
-            _react2['default'].createElement('input', { type: 'password', placeholder: 'Password', ref: 'password' })
-          ),
-          _react2['default'].createElement(
-            'p',
-            null,
-            _react2['default'].createElement('input', { type: 'password', placeholder: 'Verify password', ref: 'verpassword' })
-          ),
-          _react2['default'].createElement(
-            'p',
-            null,
-            _react2['default'].createElement('input', { type: 'email', placeholder: 'Email', ref: 'email' })
-          )
+          _react2['default'].createElement('input', { type: 'text', placeholder: 'Username', ref: 'username' }),
+          _react2['default'].createElement('input', { type: 'password', placeholder: 'Password', ref: 'password' }),
+          _react2['default'].createElement('input', { type: 'password', placeholder: 'Verify password', ref: 'verpassword' }),
+          _react2['default'].createElement('input', { type: 'email', placeholder: 'Email', ref: 'email' })
         ),
         _react2['default'].createElement('hr', null),
         _react2['default'].createElement(
           'div',
           { className: 'modalButtonBox' },
-          _react2['default'].createElement('input', { className: 'topButton aboutButton', type: 'button', value: 'Signup', onClick: this.handleSignup })
+          _react2['default'].createElement(
+            'button',
+            { className: 'modalSignupButton', onClick: this.handleSignup },
+            'Signup'
+          )
         ),
         _react2['default'].createElement(
           'div',
