@@ -3,6 +3,9 @@ import React from 'react';
 import Carousel from './carousel';
 import Waypoint from 'react-waypoint';
 
+import HomeAction from '../actions/homeActionCreators'
+import HomeStore from '../stores/homeStore';
+
 class Home extends React.Component {
   constructor() {
     super();
@@ -11,11 +14,11 @@ class Home extends React.Component {
   }
 
   _handleWaypointEnter(){
-    console.log('big header');
+    HomeAction.resizeHeader('bigheader');
   }
 
   _handleWaypointLeave(){
-    console.log('small header');
+    HomeAction.resizeHeader('smallheader');
   }
 
 
@@ -24,7 +27,7 @@ class Home extends React.Component {
       <div className="homepage">
         <div className="CarouselBoxOut">
         <div className="CarouselBoxIn">
-          <Waypoint onEnter={this._handleWaypointEnter} onLeave={this._handleWaypointLeave} threshold={0.3} />
+          <Waypoint onEnter={this._handleWaypointEnter} onLeave={this._handleWaypointLeave} threshold={0.1} />
           <Carousel bsSize="large"/>
         </div>
         </div>

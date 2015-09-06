@@ -34,11 +34,6 @@ hr {
 .themeColor1 {
   color: #D46120; }
 
-.logo {
-  height: 80px;
-  padding: 10px;
-  margin-left: 20px; }
-
 .navButton {
   border-width: 0;
   padding: 10px;
@@ -47,12 +42,33 @@ hr {
   background-color: rgba(255, 255, 255, 0);
   text-transform: capitalize; }
 
-.topbar {
+.bigheader {
+  transition: height 0.3s;
   position: fixed;
   background-color: rgba(57, 61, 71, 0.95);
   z-index: 10;
   width: 100%;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  height: 110px; }
+  .bigheader .logo {
+    transition: height 0.3s;
+    height: 110px;
+    padding: 15px;
+    margin-left: 20px; }
+
+.smallheader {
+  transition: height 0.3s;
+  position: fixed;
+  background-color: rgba(57, 61, 71, 0.95);
+  z-index: 10;
+  width: 100%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  height: 70px; }
+  .smallheader .logo {
+    transition: height 0.3s;
+    height: 70px;
+    padding: 10px;
+    margin-left: 20px; }
 
 .homepage {
   min-height: 2000px; }
