@@ -331,6 +331,72 @@ var Home = (function (_React$Component) {
             { className: 'CarouselBoxIn' },
             _react2['default'].createElement(_carousel2['default'], { bsSize: 'large' })
           )
+        ),
+        _react2['default'].createElement(
+          'div',
+          { className: 'aboutSection' },
+          _react2['default'].createElement(
+            'div',
+            { className: 'container ' },
+            _react2['default'].createElement(
+              'div',
+              { className: 'col-md-6 column aboutText' },
+              _react2['default'].createElement(
+                'div',
+                { className: 'aboutTitle' },
+                'WHO WE ARE'
+              ),
+              _react2['default'].createElement(
+                'p',
+                { className: 'aboutP' },
+                'As the official teacher resource for the State Administration of Foreign Expert Affairs (SAFEA) of the People’s  Republic of China, NAEC is committed to finding passionate, qualified teachers to fill the over 500 yearly teaching positions available in China. We are the only institution that welcomes new college graduates to this exciting cultural exchange opportunity. Teaching in China provides an amazing adventure for new teachers and those with teaching experience who are looking to share their knowledge and culture with students from a world away.'
+              )
+            ),
+            _react2['default'].createElement(
+              'div',
+              { className: 'col-md-6 column aboutImgs' },
+              _react2['default'].createElement(
+                'div',
+                { className: 'urgentcause-gallery  lightbox' },
+                _react2['default'].createElement(
+                  'div',
+                  { className: 'col-md-7' },
+                  _react2['default'].createElement(
+                    'a',
+                    { itemprop: 'url', href: 'http://placehold.it/1000x800', title: '' },
+                    _react2['default'].createElement('img', { itemprop: 'image', src: 'http://placehold.it/329x198', alt: '' })
+                  )
+                ),
+                _react2['default'].createElement(
+                  'div',
+                  { className: 'col-md-5' },
+                  _react2['default'].createElement(
+                    'a',
+                    { itemprop: 'url', href: 'http://placehold.it/1000x800', title: '' },
+                    _react2['default'].createElement('img', { itemprop: 'image', src: 'http://placehold.it/239x202', alt: '' })
+                  )
+                ),
+                _react2['default'].createElement(
+                  'div',
+                  { className: 'col-md-5' },
+                  _react2['default'].createElement(
+                    'a',
+                    { itemprop: 'url', href: 'http://placehold.it/1000x800', title: '' },
+                    _react2['default'].createElement('img', { itemprop: 'image', src: 'http://placehold.it/239x202', alt: '' })
+                  )
+                ),
+                _react2['default'].createElement(
+                  'div',
+                  { className: 'col-md-7' },
+                  _react2['default'].createElement(
+                    'a',
+                    { itemprop: 'url', href: 'http://placehold.it/1000x800', title: '' },
+                    _react2['default'].createElement('img', { itemprop: 'image', src: 'http://placehold.it/329x198', alt: '' })
+                  )
+                )
+              )
+            )
+          )
         )
       );
     }

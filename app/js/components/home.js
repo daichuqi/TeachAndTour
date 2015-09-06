@@ -25,10 +25,35 @@ class Home extends React.Component {
       <div className="homepage">
         <Waypoint onEnter={this._handleWaypointEnter} onLeave={this._handleWaypointLeave} threshold={0} />
         <div className="CarouselBoxOut">
-        <div className="CarouselBoxIn">
-          <Carousel bsSize="large"/>
+          <div className="CarouselBoxIn">
+            <Carousel bsSize="large"/>
+          </div>
         </div>
+         <div className="aboutSection">
+            <div className="container ">
+                    <div className="col-md-6 column aboutText">
+                      <div className="aboutTitle">WHO WE ARE</div>
+                      <p className="aboutP">As the official teacher resource for the State Administration of Foreign Expert Affairs (SAFEA) of the People’s  Republic of China, NAEC is committed to finding passionate, qualified teachers to fill the over 500 yearly teaching positions available in China. We are the only institution that welcomes new college graduates to this exciting cultural exchange opportunity. Teaching in China provides an amazing adventure for new teachers and those with teaching experience who are looking to share their knowledge and culture with students from a world away.</p>
+                    </div>
+
+                    <div className="col-md-6 column aboutImgs">
+                      <div className="urgentcause-gallery  lightbox">
+                        <div className="col-md-7"><a itemprop="url" href="http://placehold.it/1000x800" title=""><img itemprop="image" src="http://placehold.it/329x198" alt="" /></a></div>
+                        <div className="col-md-5"><a itemprop="url" href="http://placehold.it/1000x800" title=""><img itemprop="image" src="http://placehold.it/239x202" alt="" /></a></div>
+                        <div className="col-md-5"><a itemprop="url" href="http://placehold.it/1000x800" title=""><img itemprop="image" src="http://placehold.it/239x202" alt="" /></a></div>
+                        <div className="col-md-7"><a itemprop="url" href="http://placehold.it/1000x800" title=""><img itemprop="image" src="http://placehold.it/329x198" alt="" /></a></div>
+                      </div>
+                    </div>
+                </div>
+
+
         </div>
+
+
+
+
+
+
       </div>
     );
   }

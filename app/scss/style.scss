@@ -201,6 +201,7 @@ hr {
     width: 100%;
   }
   min-height: 2000px;
+  height: 1000px;
 
   .imageLocation{
       color: #09D4FF;
@@ -217,6 +218,49 @@ hr {
       background-color: rgba(0, 0, 0, 0.27);
       height: 200px;
     }
+
+
+  .aboutSection{
+    height: 30%;
+    background-color: rgba(227, 227, 227, 0.4);
+
+      .urgentcause-gallery > div {
+        padding: 0 0.5px;
+        margin-bottom: 1px;
+      }
+
+      .urgentcause-gallery a img {
+        width: 100%;
+      }
+      .urgentcause-gallery a {
+        float: left;
+        width: 100%;
+      }
+      .urgentcause-gallery {
+        float: left;
+        width: 100%;
+      }
+      .aboutImgs{
+        float: right;
+        margin-top: 100px;
+      }
+      .aboutText{
+        float: left;
+        margin-top: 100px;
+      }
+      .aboutTitle{
+        font-size: 20px;
+        margin-bottom: 30px;
+      }
+      .aboutP{
+        font-family: arimo;
+        color: #505050;
+        line-height: 28px;
+        letter-spacing: 0.3;
+      }
+  }
+
+
 }
 //================ Footer  ================//
 

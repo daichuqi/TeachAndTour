@@ -150,7 +150,8 @@ hr {
     margin-left: 20px; }
 
 .homepage {
-  min-height: 2000px; }
+  min-height: 2000px;
+  height: 1000px; }
   .homepage .CarouselBoxIn {
     padding-top: 70px;
     margin-right: auto;
@@ -178,6 +179,34 @@ hr {
     top: 35%;
     background-color: rgba(0, 0, 0, 0.27);
     height: 200px; }
+  .homepage .aboutSection {
+    height: 30%;
+    background-color: rgba(227, 227, 227, 0.4); }
+    .homepage .aboutSection .urgentcause-gallery > div {
+      padding: 0 0.5px;
+      margin-bottom: 1px; }
+    .homepage .aboutSection .urgentcause-gallery a img {
+      width: 100%; }
+    .homepage .aboutSection .urgentcause-gallery a {
+      float: left;
+      width: 100%; }
+    .homepage .aboutSection .urgentcause-gallery {
+      float: left;
+      width: 100%; }
+    .homepage .aboutSection .aboutImgs {
+      float: right;
+      margin-top: 100px; }
+    .homepage .aboutSection .aboutText {
+      float: left;
+      margin-top: 100px; }
+    .homepage .aboutSection .aboutTitle {
+      font-size: 20px;
+      margin-bottom: 30px; }
+    .homepage .aboutSection .aboutP {
+      font-family: arimo;
+      color: #505050;
+      line-height: 28px;
+      letter-spacing: 0.3; }
 
 .footer {
   width: 100%;
