@@ -322,7 +322,7 @@ var Home = (function (_React$Component) {
       return _react2['default'].createElement(
         'div',
         { className: 'homepage' },
-        _react2['default'].createElement(_reactWaypoint2['default'], { onEnter: this._handleWaypointEnter, onLeave: this._handleWaypointLeave, threshold: 0 }),
+        _react2['default'].createElement(_reactWaypoint2['default'], { onEnter: this._handleWaypointEnter, onLeave: this._handleWaypointLeave, threshold: 0.1 }),
         _react2['default'].createElement(
           'div',
           { className: 'CarouselBoxOut' },
@@ -910,7 +910,7 @@ var LoginButton = (function (_React$Component) {
     value: function render() {
       return _react2['default'].createElement(
         'button',
-        { className: this.state.header ? 'bigheaderlogin loginbutton' : 'smallheaderlogin loginbutton', onClick: this.open },
+        { className: 'bigheaderlogin loginbutton', onClick: this.open },
         _react2['default'].createElement('i', { className: 'fa fa-power-off' }),
         _react2['default'].createElement(
           'span',
@@ -965,15 +965,64 @@ var Nav = (function (_React$Component2) {
         null,
         _react2['default'].createElement(
           'div',
-          { className: this.state.header ? 'bigheader' : 'smallheader' },
+          { className: 'bigheader' },
           _react2['default'].createElement(
-            'nav',
+            'div',
             null,
             _react2['default'].createElement(
               _reactRouter2['default'].Link,
-              { to: 'home' },
+              { to: 'home', className: 'navLogo' },
               _react2['default'].createElement('img', { className: 'logo', src: '../assets/logo.png' })
             ),
+            _react2['default'].createElement(
+              'div',
+              { className: 'navButtonGroup' },
+              _react2['default'].createElement(
+                _reactRouter2['default'].Link,
+                { to: 'home' },
+                _react2['default'].createElement(
+                  'button',
+                  { className: 'navButton' },
+                  'home'
+                )
+              ),
+              _react2['default'].createElement(
+                _reactRouter2['default'].Link,
+                { to: 'maps' },
+                _react2['default'].createElement(
+                  'button',
+                  { className: 'navButton' },
+                  'maps'
+                )
+              ),
+              _react2['default'].createElement(
+                _reactRouter2['default'].Link,
+                { to: 'news' },
+                _react2['default'].createElement(
+                  'button',
+                  { className: 'navButton' },
+                  'news'
+                )
+              ),
+              _react2['default'].createElement(
+                _reactRouter2['default'].Link,
+                { to: 'join-us' },
+                _react2['default'].createElement(
+                  'button',
+                  { className: 'navButton' },
+                  'join'
+                )
+              ),
+              _react2['default'].createElement(LoginButton, { className: 'loginButton' })
+            )
+          )
+        ),
+        _react2['default'].createElement(
+          'div',
+          { className: this.state.header ? 'hideSmallHeader' : 'displaySmallHeader' },
+          _react2['default'].createElement(
+            'div',
+            { className: 'navButtonGroup' },
             _react2['default'].createElement(
               _reactRouter2['default'].Link,
               { to: 'home' },
@@ -1009,8 +1058,7 @@ var Nav = (function (_React$Component2) {
                 { className: 'navButton' },
                 'join'
               )
-            ),
-            _react2['default'].createElement(LoginButton, { className: 'loginButton' })
+            )
           )
         )
       );

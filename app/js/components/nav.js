@@ -41,7 +41,7 @@ class LoginButton extends React.Component {
 
   render() {
     return (
-      <button className={this.state.header? 'bigheaderlogin loginbutton' : 'smallheaderlogin loginbutton'} onClick={this.open}>
+      <button className='bigheaderlogin loginbutton' onClick={this.open}>
 
         <i className="fa fa-power-off" ></i>
         <span> Login</span>
@@ -75,15 +75,27 @@ class Nav extends React.Component {
   render() {
     return (
       <div>
-        <div className ={this.state.header ? 'bigheader':'smallheader'} >
-          <nav>
-          <Router.Link to="home"><img className="logo" src="../assets/logo.png"></img></Router.Link>
-            <Router.Link to="home"><button className="navButton">home</button></Router.Link>
-            <Router.Link to="maps"><button className="navButton">maps</button></Router.Link>
-            <Router.Link to="news"><button className="navButton">news</button></Router.Link>
-            <Router.Link to="join-us"><button className="navButton">join</button></Router.Link>
-            <LoginButton className="loginButton"/>
-          </nav>
+        <div className ='bigheader' >
+          <div>
+            <Router.Link to="home" className="navLogo"><img className="logo" src="../assets/logo.png"></img></Router.Link>
+            <div className="navButtonGroup">
+              <Router.Link to="home"><button className="navButton">home</button></Router.Link>
+              <Router.Link to="maps"><button className="navButton">maps</button></Router.Link>
+              <Router.Link to="news"><button className="navButton">news</button></Router.Link>
+              <Router.Link to="join-us"><button className="navButton">join</button></Router.Link>
+              <LoginButton className="loginButton"/>
+            </div>
+
+          </div>
+        </div>
+
+        <div className={this.state.header ? 'hideSmallHeader':'displaySmallHeader'}>
+          <div className="navButtonGroup">
+              <Router.Link to="home"><button className="navButton">home</button></Router.Link>
+              <Router.Link to="maps"><button className="navButton">maps</button></Router.Link>
+              <Router.Link to="news"><button className="navButton">news</button></Router.Link>
+              <Router.Link to="join-us"><button className="navButton">join</button></Router.Link>
+          </div>
         </div>
 
       </div>

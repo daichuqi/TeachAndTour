@@ -94,6 +94,12 @@ hr {
   background-color: rgba(255, 255, 255, 0);
   text-transform: capitalize; }
 
+.navButtonGroup {
+  display: inline; }
+
+.navLogo {
+  display: inline; }
+
 .loginbutton {
   border-width: 0;
   float: right;
@@ -123,37 +129,36 @@ hr {
   padding: 4px; }
 
 .bigheader {
-  transition: height 0.3s;
-  position: fixed;
-  background-color: rgba(57, 61, 71, 0.95);
+  background-color: rgba(119, 128, 123, 0.95);
   z-index: 10;
   width: 100%;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-  height: 70px; }
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  height: 175px;
+  margin-bottom: 30px; }
   .bigheader .logo {
-    margin-top: 5px;
-    transition: height 0.3s;
-    height: 60px;
-    margin-left: 20px; }
+    margin: 30px 20px 20px 40px;
+    height: 120px; }
 
-.smallheader {
-  transition: height 0.3s;
+.hideSmallHeader {
   position: fixed;
-  background-color: rgba(57, 61, 71, 0.95);
+  top: 0;
+  height: 0px;
+  top: -50px; }
+
+.displaySmallHeader {
   z-index: 9999;
+  position: fixed;
   width: 100%;
+  background-color: rgba(119, 128, 123, 0.95);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-  height: 40px; }
-  .smallheader .logo {
-    transition: height 0.3s;
-    height: 30px;
-    margin-left: 20px; }
+  height: 40px;
+  top: 0;
+  transition: top 0.3s; }
 
 .homepage {
   min-height: 2000px;
   height: 1000px; }
   .homepage .CarouselBoxIn {
-    padding-top: 70px;
     margin-right: auto;
     margin-left: auto;
     width: 100%; }
