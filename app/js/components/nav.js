@@ -76,21 +76,24 @@ class Nav extends React.Component {
     return (
       <div>
         <div className ='bigheader' >
+        <div className = 'contactHeader'>
+          <span></span>
+          <span></span>
+        </div>
           <div>
-            <Router.Link to="home" className="navLogo"><img className="logo" src="../assets/logo.png"></img></Router.Link>
+            <Router.Link to="home" className="navLogo"><img className="logo" src="../assets/logo2.png"></img></Router.Link>
             <div className="navButtonGroup">
               <Router.Link to="home"><button className="navButton2">home</button></Router.Link>
               <Router.Link to="maps"><button className="navButton2">maps</button></Router.Link>
               <Router.Link to="news"><button className="navButton2">news</button></Router.Link>
               <Router.Link to="join-us"><button className="navButton2">join</button></Router.Link>
-              <LoginButton className="loginButton"/>
             </div>
-
+            <LoginButton className="loginButton"/>
           </div>
         </div>
 
         <div className={this.state.header ? 'hideSmallHeader':'displaySmallHeader'}>
-          <div className="navButtonGroup">
+          <div className="navButtonGroup2">
               <Router.Link to="home"><button className="navButton">home</button></Router.Link>
               <Router.Link to="maps"><button className="navButton">maps</button></Router.Link>
               <Router.Link to="news"><button className="navButton">news</button></Router.Link>

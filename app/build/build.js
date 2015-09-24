@@ -968,11 +968,17 @@ var Nav = (function (_React$Component2) {
           { className: 'bigheader' },
           _react2['default'].createElement(
             'div',
+            { className: 'contactHeader' },
+            _react2['default'].createElement('span', null),
+            _react2['default'].createElement('span', null)
+          ),
+          _react2['default'].createElement(
+            'div',
             null,
             _react2['default'].createElement(
               _reactRouter2['default'].Link,
               { to: 'home', className: 'navLogo' },
-              _react2['default'].createElement('img', { className: 'logo', src: '../assets/logo.png' })
+              _react2['default'].createElement('img', { className: 'logo', src: '../assets/logo2.png' })
             ),
             _react2['default'].createElement(
               'div',
@@ -1012,9 +1018,9 @@ var Nav = (function (_React$Component2) {
                   { className: 'navButton2' },
                   'join'
                 )
-              ),
-              _react2['default'].createElement(LoginButton, { className: 'loginButton' })
-            )
+              )
+            ),
+            _react2['default'].createElement(LoginButton, { className: 'loginButton' })
           )
         ),
         _react2['default'].createElement(
@@ -1022,7 +1028,7 @@ var Nav = (function (_React$Component2) {
           { className: this.state.header ? 'hideSmallHeader' : 'displaySmallHeader' },
           _react2['default'].createElement(
             'div',
-            { className: 'navButtonGroup' },
+            { className: 'navButtonGroup2' },
             _react2['default'].createElement(
               _reactRouter2['default'].Link,
               { to: 'home' },
