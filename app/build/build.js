@@ -561,9 +561,13 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouter = require('react-router');
+var _reactWaypoint = require('react-waypoint');
 
-var _reactRouter2 = _interopRequireDefault(_reactRouter);
+var _reactWaypoint2 = _interopRequireDefault(_reactWaypoint);
+
+var _actionsHomeActionCreators = require('../actions/homeActionCreators');
+
+var _actionsHomeActionCreators2 = _interopRequireDefault(_actionsHomeActionCreators);
 
 var User = (function (_React$Component) {
   _inherits(User, _React$Component);
@@ -572,14 +576,27 @@ var User = (function (_React$Component) {
     _classCallCheck(this, User);
 
     _get(Object.getPrototypeOf(User.prototype), 'constructor', this).call(this);
+    this._handleWaypointEnter = this._handleWaypointEnter.bind(this);
+    this._handleWaypointLeave = this._handleWaypointLeave.bind(this);
   }
 
   _createClass(User, [{
+    key: '_handleWaypointEnter',
+    value: function _handleWaypointEnter() {
+      _actionsHomeActionCreators2['default'].resizeHeader(true);
+    }
+  }, {
+    key: '_handleWaypointLeave',
+    value: function _handleWaypointLeave() {
+      _actionsHomeActionCreators2['default'].resizeHeader(false);
+    }
+  }, {
     key: 'render',
     value: function render() {
       return _react2['default'].createElement(
         'div',
         { className: 'page' },
+        _react2['default'].createElement(_reactWaypoint2['default'], { onEnter: this._handleWaypointEnter, onLeave: this._handleWaypointLeave, threshold: 0.3 }),
         _react2['default'].createElement(
           'div',
           { className: 'tempBigTitle' },
@@ -595,7 +612,7 @@ var User = (function (_React$Component) {
 exports['default'] = User;
 module.exports = exports['default'];
 
-},{"react":368,"react-router":198}],9:[function(require,module,exports){
+},{"../actions/homeActionCreators":3,"react":368,"react-waypoint":213}],9:[function(require,module,exports){
 'use strict';
 Object.defineProperty(exports, '__esModule', {
   value: true
@@ -937,6 +954,14 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _reactWaypoint = require('react-waypoint');
+
+var _reactWaypoint2 = _interopRequireDefault(_reactWaypoint);
+
+var _actionsHomeActionCreators = require('../actions/homeActionCreators');
+
+var _actionsHomeActionCreators2 = _interopRequireDefault(_actionsHomeActionCreators);
+
 var Maps = (function (_React$Component) {
   _inherits(Maps, _React$Component);
 
@@ -944,14 +969,27 @@ var Maps = (function (_React$Component) {
     _classCallCheck(this, Maps);
 
     _get(Object.getPrototypeOf(Maps.prototype), 'constructor', this).call(this);
+    this._handleWaypointEnter = this._handleWaypointEnter.bind(this);
+    this._handleWaypointLeave = this._handleWaypointLeave.bind(this);
   }
 
   _createClass(Maps, [{
+    key: '_handleWaypointEnter',
+    value: function _handleWaypointEnter() {
+      _actionsHomeActionCreators2['default'].resizeHeader(true);
+    }
+  }, {
+    key: '_handleWaypointLeave',
+    value: function _handleWaypointLeave() {
+      _actionsHomeActionCreators2['default'].resizeHeader(false);
+    }
+  }, {
     key: 'render',
     value: function render() {
       return _react2['default'].createElement(
         'div',
         { className: 'page' },
+        _react2['default'].createElement(_reactWaypoint2['default'], { onEnter: this._handleWaypointEnter, onLeave: this._handleWaypointLeave, threshold: 0.3 }),
         _react2['default'].createElement(
           'div',
           { className: 'tempBigTitle' },
@@ -967,7 +1005,7 @@ var Maps = (function (_React$Component) {
 exports['default'] = Maps;
 module.exports = exports['default'];
 
-},{"react":368}],12:[function(require,module,exports){
+},{"../actions/homeActionCreators":3,"react":368,"react-waypoint":213}],12:[function(require,module,exports){
 'use strict';
 Object.defineProperty(exports, '__esModule', {
   value: true
@@ -1128,6 +1166,7 @@ var Nav = (function (_React$Component2) {
   }, {
     key: 'changeHeaderState',
     value: function changeHeaderState() {
+      console.log('change!!!!');
       this.setState({ header: _storesHomeStore2['default'].getHeaderState() });
     }
   }, {
@@ -1284,6 +1323,14 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _reactWaypoint = require('react-waypoint');
+
+var _reactWaypoint2 = _interopRequireDefault(_reactWaypoint);
+
+var _actionsHomeActionCreators = require('../actions/homeActionCreators');
+
+var _actionsHomeActionCreators2 = _interopRequireDefault(_actionsHomeActionCreators);
+
 var News = (function (_React$Component) {
   _inherits(News, _React$Component);
 
@@ -1291,14 +1338,27 @@ var News = (function (_React$Component) {
     _classCallCheck(this, News);
 
     _get(Object.getPrototypeOf(News.prototype), 'constructor', this).call(this);
+    this._handleWaypointEnter = this._handleWaypointEnter.bind(this);
+    this._handleWaypointLeave = this._handleWaypointLeave.bind(this);
   }
 
   _createClass(News, [{
+    key: '_handleWaypointEnter',
+    value: function _handleWaypointEnter() {
+      _actionsHomeActionCreators2['default'].resizeHeader(true);
+    }
+  }, {
+    key: '_handleWaypointLeave',
+    value: function _handleWaypointLeave() {
+      _actionsHomeActionCreators2['default'].resizeHeader(false);
+    }
+  }, {
     key: 'render',
     value: function render() {
       return _react2['default'].createElement(
         'div',
         { className: 'page' },
+        _react2['default'].createElement(_reactWaypoint2['default'], { onEnter: this._handleWaypointEnter, onLeave: this._handleWaypointLeave, threshold: 0.3 }),
         _react2['default'].createElement(
           'div',
           { className: 'tempBigTitle' },
@@ -1314,7 +1374,7 @@ var News = (function (_React$Component) {
 exports['default'] = News;
 module.exports = exports['default'];
 
-},{"react":368}],14:[function(require,module,exports){
+},{"../actions/homeActionCreators":3,"react":368,"react-waypoint":213}],14:[function(require,module,exports){
 'use strict';
 Object.defineProperty(exports, '__esModule', {
   value: true
