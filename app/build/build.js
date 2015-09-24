@@ -100,7 +100,7 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactBootstrap = require('react-bootstrap');
 
-var img = ['../assets/images/bg2.jpg'];
+var img = ['../assets/images/bg2.jpeg'];
 
 var ControlledCarousel = (function (_React$Component) {
   _inherits(ControlledCarousel, _React$Component);
@@ -322,7 +322,7 @@ var Home = (function (_React$Component) {
       return _react2['default'].createElement(
         'div',
         { className: 'homepage' },
-        _react2['default'].createElement(_reactWaypoint2['default'], { onEnter: this._handleWaypointEnter, onLeave: this._handleWaypointLeave, threshold: 0.1 }),
+        _react2['default'].createElement(_reactWaypoint2['default'], { onEnter: this._handleWaypointEnter, onLeave: this._handleWaypointLeave, threshold: 0.3 }),
         _react2['default'].createElement(
           'div',
           { className: 'CarouselBoxOut' },
@@ -982,7 +982,7 @@ var Nav = (function (_React$Component2) {
                 { to: 'home' },
                 _react2['default'].createElement(
                   'button',
-                  { className: 'navButton' },
+                  { className: 'navButton2' },
                   'home'
                 )
               ),
@@ -991,7 +991,7 @@ var Nav = (function (_React$Component2) {
                 { to: 'maps' },
                 _react2['default'].createElement(
                   'button',
-                  { className: 'navButton' },
+                  { className: 'navButton2' },
                   'maps'
                 )
               ),
@@ -1000,7 +1000,7 @@ var Nav = (function (_React$Component2) {
                 { to: 'news' },
                 _react2['default'].createElement(
                   'button',
-                  { className: 'navButton' },
+                  { className: 'navButton2' },
                   'news'
                 )
               ),
@@ -1009,7 +1009,7 @@ var Nav = (function (_React$Component2) {
                 { to: 'join-us' },
                 _react2['default'].createElement(
                   'button',
-                  { className: 'navButton' },
+                  { className: 'navButton2' },
                   'join'
                 )
               ),

@@ -115,6 +115,17 @@ hr {
   text-transform: capitalize;
 }
 
+.navButton2{
+    margin-left: 30px;
+    font-size: 20px;
+    border-width: 0;
+    padding: 10px;
+    width: 100px;
+    color: #DDE4E9;
+    background-color: rgba(255, 255, 255, 0);
+    text-transform: capitalize;
+}
+
 .navButtonGroup{
   display: inline;
 }
@@ -156,23 +167,27 @@ hr {
 }
 
 .bigheader{
-    background-color: rgba(119, 128, 123, 0.95);
+    background-color: rgba(119, 128, 123, 0.98);
     z-index: 10;
+    position: absolute;
     width: 100%;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-    height: 175px;
-    margin-bottom: 30px;
+    box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.3);
+    height: 115px;
     .logo{
-      margin: 30px 20px 20px 40px;
-      height: 120px;
+      margin: 15px 20px 10px 40px;
+      height: 90px;
     }
 
 }
   .hideSmallHeader {
+    z-index: 9999;
     position: fixed;
-    top: 0;
-    height: 0px;
-    top:-50px;
+    width: 100%;
+    background-color: rgba(119, 128, 123, 0.95);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    height: 40px;
+    top:-140px;
+    transition: top 0.3s;
   }
   .displaySmallHeader{
     z-index: 9999;
@@ -218,7 +233,7 @@ hr {
     .carousel-caption{
       right: 0%;
       left: 0%;
-      top: 35%;
+      top: 55%;
       background-color: rgba(0, 0, 0, 0.27);
       height: 200px;
     }

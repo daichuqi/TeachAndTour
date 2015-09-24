@@ -23,7 +23,7 @@ class Home extends React.Component {
   render() {
     return (
       <div className="homepage">
-        <Waypoint onEnter={this._handleWaypointEnter} onLeave={this._handleWaypointLeave} threshold={0.1} />
+        <Waypoint onEnter={this._handleWaypointEnter} onLeave={this._handleWaypointLeave} threshold={0.3} />
         <div className="CarouselBoxOut">
           <div className="CarouselBoxIn">
             <Carousel bsSize="large"/>

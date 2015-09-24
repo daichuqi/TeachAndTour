@@ -3,7 +3,7 @@ import React from 'react';
 import {Carousel,CarouselItem} from 'react-bootstrap';
 
 
-var img = ['../assets/images/bg2.jpg'];
+var img = ['../assets/images/bg2.jpeg'];
 
 class ControlledCarousel extends React.Component{
   constructor(){
