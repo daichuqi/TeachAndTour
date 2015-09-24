@@ -938,7 +938,8 @@ var Nav = (function (_React$Component2) {
     this.componentDidMount = this.componentDidMount.bind(this);
     this.componentWillUnmount = this.componentWillUnmount.bind(this);
     this.state = {
-      bigheader: true
+      bigheader: true,
+      header: 'hideSmallHeader'
     };
   }
 
@@ -969,8 +970,20 @@ var Nav = (function (_React$Component2) {
           _react2['default'].createElement(
             'div',
             { className: 'contactHeader' },
-            _react2['default'].createElement('span', null),
-            _react2['default'].createElement('span', null)
+            _react2['default'].createElement(
+              'div',
+              { className: 'contactHeaderContainer' },
+              _react2['default'].createElement(
+                'span',
+                { className: 'fa fa-home' },
+                ' 425 Street Name, Washington DC'
+              ),
+              _react2['default'].createElement(
+                'span',
+                { className: 'fa fa-phone' },
+                ' (765)432-109'
+              )
+            )
           ),
           _react2['default'].createElement(
             'div',

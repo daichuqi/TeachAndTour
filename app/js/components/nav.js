@@ -60,7 +60,8 @@ class Nav extends React.Component {
     this.componentDidMount = this.componentDidMount.bind(this);
     this.componentWillUnmount = this.componentWillUnmount.bind(this);
     this.state = {
-      bigheader:true
+      bigheader:true,
+      header:'hideSmallHeader'
     }
   }
   componentDidMount() {
@@ -76,9 +77,11 @@ class Nav extends React.Component {
     return (
       <div>
         <div className ='bigheader' >
-        <div className = 'contactHeader'>
-          <span></span>
-          <span></span>
+        <div className ='contactHeader'>
+          <div className='contactHeaderContainer'>
+            <span className='fa fa-home'> 425 Street Name, Washington DC</span>
+            <span className='fa fa-phone'> (765)432-109</span>
+          </div>
         </div>
           <div>
             <Router.Link to="home" className="navLogo"><img className="logo" src="../assets/logo2.png"></img></Router.Link>

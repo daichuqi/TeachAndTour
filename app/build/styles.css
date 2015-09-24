@@ -68,23 +68,27 @@ hr {
 .AuthForm button {
   width: 100%;
   color: #ffffff;
-  border: 1px solid #136084;
   background: #136084;
-  padding: 15px 20px;
-  height: 50px;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 2px;
+  height: 30px;
+  border: 0;
+  border-radius: 5px;
   text-transform: uppercase;
   font-size: 13px;
   line-height: 1.5em;
-  -webkit-transition: 0.2s ease-in;
-  -o-transition: 0.2s ease-in;
-  transition: 0.2s ease-in;
-  -webkit-transition: all 0.2s ease-in ease-out;
-  -moz-transition: all 0.2s ease-in ease-out;
-  -o-transition: all 0.2s ease-in ease-out;
-  transition: all 0.2s ease-in ease-out;
-  font-family: 'Montserrat', "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  transition: 0.2s ease-in; }
+
+.contactHeader {
+  float: left;
+  width: 100%;
+  background: none repeat scroll 0 0 #3a3a3a;
+  height: 30px; }
+  .contactHeader .contactHeaderContainer {
+    font-size: 11px;
+    color: #d8d8d8;
+    margin-left: 35px;
+    margin-top: 6px; }
+    .contactHeader .contactHeaderContainer span {
+      margin-right: 50px; }
 
 .navButton {
   border-width: 0;
@@ -95,6 +99,7 @@ hr {
   text-transform: capitalize; }
 
 .navButton2 {
+  height: 80px;
   margin-left: 30px;
   font-size: 18px;
   border-width: 0;
@@ -104,6 +109,11 @@ hr {
   background-color: rgba(255, 255, 255, 0);
   text-transform: capitalize; }
 
+.navButton2:hover {
+  background-color: #3CB4D4;
+  color: white;
+  transition: 0.2s; }
+
 .navButtonGroup2 {
   position: absolute;
   top: 0;
@@ -111,7 +121,7 @@ hr {
 
 .navButtonGroup {
   position: absolute;
-  top: 20px;
+  top: 30px;
   left: 300px; }
 
 .navLogo {
@@ -151,7 +161,7 @@ hr {
   position: absolute;
   width: 100%;
   box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.3);
-  height: 80px; }
+  height: 110px; }
   .bigheader .logo {
     margin: 10px 10px 10px 30px;
     height: 60px; }
@@ -160,17 +170,17 @@ hr {
   z-index: 9999;
   position: fixed;
   width: 100%;
-  background-color: rgba(119, 128, 123, 0.95);
+  background-color: #393d47;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   height: 40px;
   top: -140px;
-  transition: top 0.3s; }
+  transition: top 1s; }
 
 .displaySmallHeader {
   z-index: 9999;
   position: fixed;
   width: 100%;
-  background-color: rgba(119, 128, 123, 0.95);
+  background-color: #393d47;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   height: 40px;
   top: 0;
@@ -202,7 +212,7 @@ hr {
   .homepage .carousel-caption {
     right: 0%;
     left: 0%;
-    top: 55%;
+    top: 40%;
     background-color: rgba(0, 0, 0, 0.27);
     height: 200px; }
   .homepage .aboutSection {
