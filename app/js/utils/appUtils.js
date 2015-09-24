@@ -1,10 +1,7 @@
 'use strict';
+import fetch from 'whatwg-fetch';
 
-let rootUrl = '';
 export default {
-  get(url) {
-    return window.fetch(url);
-  },
 
   postJSON(url, body) {
     var body = JSON.stringify(body);

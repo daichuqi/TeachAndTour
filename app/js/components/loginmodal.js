@@ -3,7 +3,7 @@ import React from 'react';
 import { Modal } from 'react-bootstrap';
 
 import ModalActions from '../actions/modalActionCreators';
-// import UserActions from '../actions/userActionCreators';
+import UserActions from '../actions/UserActionCreators';
 
 var ENTER_KEY_CODE = 13;
 
@@ -23,7 +23,7 @@ class Login extends React.Component {
     userData.username = this.refs.username.getDOMNode().value;
     userData.password = this.refs.password.getDOMNode().value;
     if(userData.username && userData.password){
-      // UserActions.loginUser(userData);
+      UserActions.loginUser(userData);
     }
 
   }
@@ -71,7 +71,6 @@ class Signup extends React.Component {
     let nameStr = /^[A-Za-z0-9_]{1,20}$/;
     let passwordStr = /^.{3,64}$/;
     let userData = {};
-    console.log('refs', this.refs)
     userData.username = this.refs.username.getDOMNode().value;
     userData.password = this.refs.password.getDOMNode().value;
     userData.verpassword = this.refs.verpassword.getDOMNode().value;
@@ -86,8 +85,8 @@ class Signup extends React.Component {
     }else if (!userData.password.match(passwordStr)) {
       alert('Password must be between 8 and 64 characters');
     }else {
-      // UserActions.createUser(userData, () => {});
-      // this.toggleAuth();
+      UserActions.createUser(userData, () => {});
+      this.toggleAuth();
     }
   }
 

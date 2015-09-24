@@ -38,10 +38,10 @@ class Home extends React.Component {
 
                     <div className="col-md-6 column aboutImgs">
                       <div className="urgentcause-gallery  lightbox">
-                        <div className="col-md-7"><a itemprop="url" href="http://placehold.it/1000x800" title=""><img itemprop="image" src="http://placehold.it/329x198" alt="" /></a></div>
-                        <div className="col-md-5"><a itemprop="url" href="http://placehold.it/1000x800" title=""><img itemprop="image" src="http://placehold.it/239x202" alt="" /></a></div>
-                        <div className="col-md-5"><a itemprop="url" href="http://placehold.it/1000x800" title=""><img itemprop="image" src="http://placehold.it/239x202" alt="" /></a></div>
-                        <div className="col-md-7"><a itemprop="url" href="http://placehold.it/1000x800" title=""><img itemprop="image" src="http://placehold.it/329x198" alt="" /></a></div>
+                        <div className="col-md-7"><a itemProp="url" href="http://placehold.it/1000x800" title=""><img itemProp="image" src="http://placehold.it/329x198" alt="" /></a></div>
+                        <div className="col-md-5"><a itemProp="url" href="http://placehold.it/1000x800" title=""><img itemProp="image" src="http://placehold.it/239x202" alt="" /></a></div>
+                        <div className="col-md-5"><a itemProp="url" href="http://placehold.it/1000x800" title=""><img itemProp="image" src="http://placehold.it/239x202" alt="" /></a></div>
+                        <div className="col-md-7"><a itemProp="url" href="http://placehold.it/1000x800" title=""><img itemProp="image" src="http://placehold.it/329x198" alt="" /></a></div>
                       </div>
                     </div>
                 </div>
