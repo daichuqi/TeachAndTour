@@ -8,8 +8,10 @@ class News extends React.Component {
    }
   render() {
     return (
-      <div>
-      this is user
+      <div className='page'>
+        <div className='tempBigTitle'>
+          this is page4
+        </div>
       </div>
     )
   }

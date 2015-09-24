@@ -23,7 +23,9 @@ class Login extends React.Component {
     userData.username = this.refs.username.getDOMNode().value;
     userData.password = this.refs.password.getDOMNode().value;
     if(userData.username && userData.password){
-      UserActions.loginUser(userData);
+      UserActions.loginUser(userData,function(){
+        ModalActions.closeLoginModal()
+      });
     }
 
   }
@@ -85,8 +87,9 @@ class Signup extends React.Component {
     }else if (!userData.password.match(passwordStr)) {
       alert('Password must be between 8 and 64 characters');
     }else {
-      UserActions.createUser(userData, () => {});
-      this.toggleAuth();
+      UserActions.createUser(userData, function(){
+        ModalActions.closeLoginModal()
+      });
     }
   }
 

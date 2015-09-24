@@ -4,7 +4,9 @@ const constants = {
     ActionTypes: keyMirror({
       RESIZEHEADER: null,
       CLOSE_LOGIN_MODAL:null,
-      SIGNUP:null
+      SIGNUP:null,
+      LOGIN:null,
+      LOGOUT:null
   })
 };
 

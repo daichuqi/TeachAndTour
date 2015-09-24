@@ -5,6 +5,7 @@ import Waypoint from 'react-waypoint';
 
 import HomeAction from '../actions/homeActionCreators'
 import HomeStore from '../stores/homeStore';
+import UserStore from '../stores/userProfileStore';
 
 class Home extends React.Component {
   constructor() {

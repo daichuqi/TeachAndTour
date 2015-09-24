@@ -19,7 +19,6 @@ export default ({
   },
 
   createUser (user, cb) {
-    console.log(user)
     Utils.postJSON('/signup', user)
     .then((response) => {
       Dispatcher.dispatch({
@@ -35,7 +34,7 @@ export default ({
     });
   },
 
-  loginUser (user) {
+  loginUser (user,cb) {
     Utils.postJSON('/login', user)
     .then((response) => {
       Dispatcher.dispatch({
@@ -43,6 +42,7 @@ export default ({
         message: 'Login successful',
         response: response
       });
+      cb();
       console.log('logged in successfuly');
     })
     .catch((err) => {
@@ -50,12 +50,11 @@ export default ({
     });
   },
 
-  logoutUser (callback) {
+  logoutUser () {
     Dispatcher.dispatch({
       type: ActionType.LOGOUT,
       message: 'Logout successful',
     });
-    callback();
   },
 
   getUser(userID){

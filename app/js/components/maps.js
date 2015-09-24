@@ -8,8 +8,10 @@ class Maps extends React.Component {
    }
   render() {
     return (
-      <div>
-      this is Maps
+      <div className='page'>
+        <div className='tempBigTitle'>
+          this is page3
+        </div>
       </div>
     )
   }

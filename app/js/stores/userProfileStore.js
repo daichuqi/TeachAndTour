@@ -11,7 +11,7 @@ const CHANGE_EVENT = 'change';
 
 var _user = {};
 
-let UserProfile = assign({}, EventEmitter.prototype, {
+var UserProfile = assign({}, EventEmitter.prototype, {
   emitChange() {
     this.emit(CHANGE_EVENT)
   },
@@ -76,7 +76,6 @@ var deleteCookie = function() {
 };
 
 UserProfile.dispatchToken = Dispatcher.register(function(payload) {
-
   switch (payload.type) {
     case ActionType.LOGIN:
       if (payload.response.success) {
@@ -84,10 +83,10 @@ UserProfile.dispatchToken = Dispatcher.register(function(payload) {
         let username = payload.response.user[0].username;
         let img = payload.response.user[0].profilePic;
         setCookie(id,username,img);
+        UserProfile.emitChange();
       } else {
         console.log("login failed, user does not exist");
       }
-      UserProfile.emitChange();
       break;
 
     case ActionType.SIGNUP:
@@ -98,14 +97,12 @@ UserProfile.dispatchToken = Dispatcher.register(function(payload) {
         let img = payload.response.userData.profilePic;
         setCookie(id, username, img);
         UserProfile.emitChange();
-
       } else {
         console.log("signup failed, user already exists");
       }
       break;
 
     case ActionType.LOGOUT:
-      console.log("store logout");
       deleteCookie();
       UserProfile.emitChange();
       break;
