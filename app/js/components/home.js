@@ -13,7 +13,6 @@ class Home extends React.Component {
     this._handleWaypointEnter = this._handleWaypointEnter.bind(this);
     this._handleWaypointLeave = this._handleWaypointLeave.bind(this);
   }
-
   _handleWaypointEnter(){
     HomeAction.resizeHeader(true);
   }

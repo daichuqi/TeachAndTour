@@ -20,6 +20,7 @@ header{
 }
 html,
 body {
+
   margin:0;
   padding:0;
   height:100%;
@@ -120,13 +121,16 @@ hr {
 }
 
 .navButton{
-
   border-width: 0;
   padding: 10px;
   width: 100px;
   color: #C0CAD2;
   background-color: rgba(255, 255, 255, 0);
   text-transform: capitalize;
+}
+.navButton:hover{
+  background-color: rgba(40, 163, 206, 0.83);
+  color: white;
 }
 
 .navButton2{

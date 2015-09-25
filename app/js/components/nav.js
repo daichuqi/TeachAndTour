@@ -42,7 +42,7 @@ class LoginButton extends React.Component {
   }
   changeLoginStatus(){
     if(UserProfile.isLoggedIn()){
-      this.setState({login:' logout'})
+      this.setState({login:' logout'});
     }else{
       this.setState({login:' login'})
     }
@@ -50,6 +50,7 @@ class LoginButton extends React.Component {
   open(){
     if(UserProfile.isLoggedIn()){
       UserActions.logoutUser();
+      this.context.router.transitionTo('home');
     }else{
       this.setState({open:true});
     }
@@ -67,6 +68,10 @@ class LoginButton extends React.Component {
       </button>
     );
   }
+};
+
+LoginButton.contextTypes = {
+  router: React.PropTypes.func.isRequired
 };
 
 

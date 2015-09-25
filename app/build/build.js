@@ -724,12 +724,15 @@ var Login = (function (_React$Component) {
   }, {
     key: 'handleLogin',
     value: function handleLogin() {
+      var _this = this;
+
       var userData = {};
       userData.username = this.refs.username.getDOMNode().value;
       userData.password = this.refs.password.getDOMNode().value;
       if (userData.username && userData.password) {
         _actionsUserActionCreators2['default'].loginUser(userData, function () {
           _actionsModalActionCreators2['default'].closeLoginModal();
+          _this.context.router.transitionTo('news');
         });
       }
     }
@@ -777,6 +780,10 @@ var Login = (function (_React$Component) {
 
   return Login;
 })(_react2['default'].Component);
+
+Login.contextTypes = {
+  router: _react2['default'].PropTypes.func.isRequired
+};
 
 var Signup = (function (_React$Component2) {
   _inherits(Signup, _React$Component2);
@@ -1105,6 +1112,7 @@ var LoginButton = (function (_React$Component) {
     value: function open() {
       if (_storesUserProfileStore2['default'].isLoggedIn()) {
         _actionsUserActionCreators2['default'].logoutUser();
+        this.context.router.transitionTo('home');
       } else {
         this.setState({ open: true });
       }
@@ -1137,6 +1145,10 @@ var LoginButton = (function (_React$Component) {
 
 ;
 
+LoginButton.contextTypes = {
+  router: _react2['default'].PropTypes.func.isRequired
+};
+
 var Nav = (function (_React$Component2) {
   _inherits(Nav, _React$Component2);
 
@@ -1166,7 +1178,6 @@ var Nav = (function (_React$Component2) {
   }, {
     key: 'changeHeaderState',
     value: function changeHeaderState() {
-      console.log('change!!!!');
       this.setState({ header: _storesHomeStore2['default'].getHeaderState() });
     }
   }, {
@@ -1331,6 +1342,10 @@ var _actionsHomeActionCreators = require('../actions/homeActionCreators');
 
 var _actionsHomeActionCreators2 = _interopRequireDefault(_actionsHomeActionCreators);
 
+var _storesUserProfileStore = require('../stores/userProfileStore');
+
+var _storesUserProfileStore2 = _interopRequireDefault(_storesUserProfileStore);
+
 var News = (function (_React$Component) {
   _inherits(News, _React$Component);
 
@@ -1340,9 +1355,18 @@ var News = (function (_React$Component) {
     _get(Object.getPrototypeOf(News.prototype), 'constructor', this).call(this);
     this._handleWaypointEnter = this._handleWaypointEnter.bind(this);
     this._handleWaypointLeave = this._handleWaypointLeave.bind(this);
+    this.componentDidMount = this.componentDidMount.bind(this);
+    this.state = {
+      username: 'null'
+    };
   }
 
   _createClass(News, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      this.setState({ username: _storesUserProfileStore2['default'].getCookieName() });
+    }
+  }, {
     key: '_handleWaypointEnter',
     value: function _handleWaypointEnter() {
       _actionsHomeActionCreators2['default'].resizeHeader(true);
@@ -1362,7 +1386,8 @@ var News = (function (_React$Component) {
         _react2['default'].createElement(
           'div',
           { className: 'tempBigTitle' },
-          'this is page4'
+          'Hello ',
+          this.state.username
         )
       );
     }
@@ -1374,7 +1399,7 @@ var News = (function (_React$Component) {
 exports['default'] = News;
 module.exports = exports['default'];
 
-},{"../actions/homeActionCreators":3,"react":368,"react-waypoint":213}],14:[function(require,module,exports){
+},{"../actions/homeActionCreators":3,"../stores/userProfileStore":20,"react":368,"react-waypoint":213}],14:[function(require,module,exports){
 'use strict';
 Object.defineProperty(exports, '__esModule', {
   value: true

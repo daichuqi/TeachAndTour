@@ -4,32 +4,26 @@ import { Modal } from 'react-bootstrap';
 
 import ModalActions from '../actions/modalActionCreators';
 import UserActions from '../actions/UserActionCreators';
-
 var ENTER_KEY_CODE = 13;
-
 class Login extends React.Component {
-
   constructor(props, context) {
     super(props);
     this.toggleAuth = this.toggleAuth.bind(this);
     this.handleLogin = this.handleLogin.bind(this);
     this.handleKeyDown = this.handleKeyDown.bind(this);
   }
-
   toggleAuth() { this.props.handleToggle('Signup'); }
-
   handleLogin() {
     let userData = {};
     userData.username = this.refs.username.getDOMNode().value;
     userData.password = this.refs.password.getDOMNode().value;
     if(userData.username && userData.password){
-      UserActions.loginUser(userData,function(){
-        ModalActions.closeLoginModal()
+      UserActions.loginUser(userData, () => {
+        ModalActions.closeLoginModal();
+        this.context.router.transitionTo('news');
       });
     }
-
   }
-
   handleKeyDown(event) {
     if(event.keyCode === ENTER_KEY_CODE) {
       this.handleLogin();
@@ -56,6 +50,9 @@ class Login extends React.Component {
       );
   }
 }
+Login.contextTypes = {
+  router: React.PropTypes.func.isRequired
+};
 
 
 class Signup extends React.Component {
