@@ -229,7 +229,7 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactBootstrap = require('react-bootstrap');
 
-var img = ['../assets/images/bg0.jpg', '../assets/images/bg2.jpg', '../assets/images/bg3.jpg', '../assets/images/bg4.jpg'];
+var img = ['../assets/images/bg5.jpg', '../assets/images/bg6.jpg', '../assets/images/bg7.jpg', '../assets/images/bg8.jpg'];
 
 var ControlledCarousel = (function (_React$Component) {
   _inherits(ControlledCarousel, _React$Component);
@@ -238,26 +238,14 @@ var ControlledCarousel = (function (_React$Component) {
     _classCallCheck(this, ControlledCarousel);
 
     _get(Object.getPrototypeOf(ControlledCarousel.prototype), 'constructor', this).call(this);
-    this.state = {
-      index: 0,
-      direction: null
-    };
   }
 
   _createClass(ControlledCarousel, [{
-    key: 'handleSelect',
-    value: function handleSelect(selectedIndex, selectedDirection) {
-      this.setState({
-        index: selectedIndex,
-        direction: selectedDirection
-      });
-    }
-  }, {
     key: 'render',
     value: function render() {
       return _react2['default'].createElement(
         _reactBootstrap.Carousel,
-        { activeIndex: this.state.index, direction: this.state.direction, onSelect: this.handleSelect },
+        null,
         _react2['default'].createElement(
           _reactBootstrap.CarouselItem,
           null,
