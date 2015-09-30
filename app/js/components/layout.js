@@ -7,7 +7,7 @@ import Footer from './footer';
 class Layout extends React.Component {
   render() {
     return (
-      <div>
+      <div id='root'>
       <Navigation />
       <Router.RouteHandler/>
       <Footer />

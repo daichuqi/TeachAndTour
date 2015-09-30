@@ -7,9 +7,18 @@
   }
 }
 
-
-
 //=============== Normalize =============//
+#root{
+  height: 100%;
+}
+
+* {
+    outline-style: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
 header{
     float: left;
     overflow: visible;
@@ -20,7 +29,6 @@ header{
 }
 html,
 body {
-
   margin:0;
   padding:0;
   height:100%;
@@ -34,7 +42,6 @@ hr {
   border: 0;
   border-top: 1px solid #dce0e0;
 }
-
 .fa{
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
@@ -134,16 +141,20 @@ hr {
 }
 
 .navButton2{
-    height: 80px;
-    margin-left: 30px;
-    font-size: 18px;
+    height: 35px;
+    font-size: 14px;
     border-width: 0;
-    padding: 10px;
-    width: 100px;
-    color: #0C0C0C;
-    background-color: rgba(255, 255, 255, 0);
-    text-transform: capitalize;
+    padding: 5px 100px 5px 0px;
+    width: 20%;
+    margin: 0px 0px 0px 0.5%;
+    color: #5D5D5D;
+    background-color: rgba(212, 218, 218, 0.4);
+    text-transform: uppercase;
 }
+.navButton3{
+    width: 35%;
+    padding: 5px 200px 5px 0px;
+  }
 
 .navButton2:hover{
   background-color: #3CB4D4;
@@ -159,19 +170,18 @@ hr {
     left:0;
 }
 .navButtonGroup{
-    position: absolute;
     top: 30px;
-    left:300px;
+    left:50%;
 }
 .navLogo{
   display: inline;
 }
 .loginbutton{
+    position: absolute;
+    top: 50px;
+    left: 85%;
     border-width: 0;
-    float: right;
-    margin-right: 30px;
-    margin-top: 20px;
-    border-radius: 4px;
+    border-radius: 2px;
     color: #FFFFFF;
     background-color: #56c2f0;
     text-transform: uppercase;
@@ -203,9 +213,7 @@ hr {
 .bigheader{
     background-color: rgba(255, 255, 255, 0.70);
     z-index: 10;
-    position: absolute;
     width: 100%;
-    box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.3);
     height: 110px;
     .logo{
     margin: 10px 10px 10px 30px;
@@ -236,80 +244,37 @@ hr {
 //================ Home  ================//
 
 .homepage {
-  .CarouselBoxIn{
-    margin-right: auto;
-    margin-left: auto;
+    height: 100%;
     width: 100%;
-    .carousel-title{
-      font-size: 60px;
-      color: white;
-      text-shadow: 0 1px 20px #313E45;
-    }
-  }
-  .CarouselBoxOut{
-    width: inherit;
-    background-color: rgba(0, 0, 0, 0.76);
-  }
-  .bannerImg{
-    width: 100%;
-  }
-  min-height: 2000px;
-  height: 1000px;
+    padding-top: 150px;
+    margin-top: -110px;
+    padding-bottom: .8%;
 
-  .imageLocation{
-      color: #09D4FF;
-      font-size: 15px;
-      float: right;
-      position: absolute;
-      bottom: 10%;
-      right: 2%;
-    }
-    .carousel-caption{
-      right: 0%;
-      left: 0%;
-      top: 40%;
-      background-color: rgba(0, 0, 0, 0.27);
-      height: 200px;
+  #homeleft{
+    position: relative;
+    float: left;
+    height: 100%;
+    width: 58.5%;
+    margin: 0 1% 0 0.5%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    opacity: 1;
+
+  }
+
+  #homeright{
+    height: 100%;
+    width: 38%;
+    margin-left: 1%;
+    float: right;
+    #topBlock{
+      height: 50%;
     }
 
-  .aboutSection{
-    height: 30%;
-    background-color: rgba(227, 227, 227, 0.4);
-
-      .urgentcause-gallery > div {
-        padding: 0 0.5px;
-        margin-bottom: 1px;
-      }
-
-      .urgentcause-gallery a img {
-        width: 100%;
-      }
-      .urgentcause-gallery a {
-        float: left;
-        width: 100%;
-      }
-      .urgentcause-gallery {
-        float: left;
-        width: 100%;
-      }
-      .aboutImgs{
-        float: right;
-        margin-top: 100px;
-      }
-      .aboutText{
-        float: left;
-        margin-top: 100px;
-      }
-      .aboutTitle{
-        font-size: 20px;
-        margin-bottom: 30px;
-      }
-      .aboutP{
-        font-family: arimo;
-        color: #505050;
-        line-height: 28px;
-        letter-spacing: 0.3;
-      }
   }
 
 
@@ -328,7 +293,7 @@ hr {
     padding-left: 100px;
     padding-right: 100px;
     .footer-divider{
-      margin-top: 30px;
+      margin-top: 0;
       margin-bottom: 20px;
       border-color: rgba(255,255,255,0.2);
     }

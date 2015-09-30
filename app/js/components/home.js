@@ -7,6 +7,18 @@ import HomeAction from '../actions/homeActionCreators'
 import HomeStore from '../stores/homeStore';
 import UserStore from '../stores/userProfileStore';
 
+
+var img =
+['../assets/images/bg0.jpg',
+'../assets/images/bg6.jpg',
+'../assets/images/bg7.jpg',
+'../assets/images/bg8.jpg',
+];
+
+var divStyle = {
+  backgroundImage: 'url(' + img[0] + ')',
+};
+
 class Home extends React.Component {
   constructor() {
     super();
@@ -24,35 +36,16 @@ class Home extends React.Component {
     return (
       <div className="homepage">
         <Waypoint onEnter={this._handleWaypointEnter} onLeave={this._handleWaypointLeave} threshold={0.3} />
-        <div className="CarouselBoxOut">
-          <div className="CarouselBoxIn">
-            <Carousel bsSize="large"/>
+
+        <div id='homeleft' style={divStyle}>
+        </div>
+
+        <div id='homeright'>
+          <div id='topBlock'>
+            <div id='topLeft'></div>
+            <div id='topRight'></div>
           </div>
         </div>
-         <div className="aboutSection">
-            <div className="container ">
-                    <div className="col-md-6 column aboutText">
-                      <div className="aboutTitle">WHO WE ARE</div>
-                      <p className="aboutP">As the official teacher resource for the State Administration of Foreign Expert Affairs (SAFEA) of the People’s  Republic of China, NAEC is committed to finding passionate, qualified teachers to fill the over 500 yearly teaching positions available in China. We are the only institution that welcomes new college graduates to this exciting cultural exchange opportunity. Teaching in China provides an amazing adventure for new teachers and those with teaching experience who are looking to share their knowledge and culture with students from a world away.</p>
-                    </div>
-
-                    <div className="col-md-6 column aboutImgs">
-                      <div className="urgentcause-gallery  lightbox">
-                        <div className="col-md-7"><a itemProp="url" href="http://placehold.it/1000x800" title=""><img itemProp="image" src="http://placehold.it/329x198" alt="" /></a></div>
-                        <div className="col-md-5"><a itemProp="url" href="http://placehold.it/1000x800" title=""><img itemProp="image" src="http://placehold.it/239x202" alt="" /></a></div>
-                        <div className="col-md-5"><a itemProp="url" href="http://placehold.it/1000x800" title=""><img itemProp="image" src="http://placehold.it/239x202" alt="" /></a></div>
-                        <div className="col-md-7"><a itemProp="url" href="http://placehold.it/1000x800" title=""><img itemProp="image" src="http://placehold.it/329x198" alt="" /></a></div>
-                      </div>
-                    </div>
-                </div>
-
-
-        </div>
-
-
-
-
-
 
       </div>
     );
