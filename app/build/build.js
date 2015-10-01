@@ -532,7 +532,11 @@ var Home = (function (_React$Component) {
           _react2['default'].createElement(
             'div',
             { id: 'topBlock' },
-            _react2['default'].createElement('div', { id: 'topLeft' }),
+            _react2['default'].createElement(
+              'div',
+              { id: 'topLeft' },
+              _react2['default'].createElement('div', { id: 'topLeftLayer' })
+            ),
             _react2['default'].createElement('div', { id: 'topRight' })
           ),
           _react2['default'].createElement('div', { id: 'buttonBlock' })
@@ -1276,6 +1280,11 @@ var Nav = (function (_React$Component) {
             _react2['default'].createElement(
               'div',
               { className: 'navButtonGroup' },
+              _react2['default'].createElement(
+                _reactRouter2['default'].Link,
+                { to: 'home' },
+                _react2['default'].createElement('button', { className: 'navButton2 navButton4 fa fa-home' })
+              ),
               _react2['default'].createElement(
                 _reactRouter2['default'].Link,
                 { to: 'home' },

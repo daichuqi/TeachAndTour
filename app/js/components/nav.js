@@ -44,6 +44,7 @@ class Nav extends React.Component {
             <Router.Link to="home" className="navLogo"><img className="logo" src="../assets/logo2.png"></img></Router.Link>
             <LoginButton className="loginButton"/>
             <div className="navButtonGroup">
+              <Router.Link to="home"><button className="navButton2 navButton4 fa fa-home"></button></Router.Link>
               <Router.Link to="home"><button className="navButton2">home</button></Router.Link>
               <Router.Link to="maps"><button className="navButton2">maps</button></Router.Link>
               <Router.Link to="news"><button className="navButton2">news</button></Router.Link>

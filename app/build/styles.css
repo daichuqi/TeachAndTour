@@ -122,7 +122,7 @@ hr {
   height: 35px;
   font-size: 14px;
   border-width: 0;
-  padding: 5px 80px 5px 0px;
+  padding: 10px 80px 10px 0px;
   width: 20%;
   margin: 0px 0px 0px 0.15%;
   color: #5D5D5D;
@@ -130,8 +130,14 @@ hr {
   text-transform: uppercase; }
 
 .navButton3 {
-  width: 38%;
-  padding: 5px 200px 5px 0px; }
+  width: 32%;
+  padding: 10px 200px 5px 0px; }
+
+.navButton4 {
+  font-size: 25px;
+  padding: 2px 0px 5px 0px;
+  width: 50px;
+  margin-left: 5px; }
 
 .navButton2:hover {
   background-color: #3CB4D4;
@@ -212,7 +218,8 @@ hr {
   width: 100%;
   padding-top: 160px;
   margin-top: -110px;
-  padding-bottom: .8%; }
+  padding-bottom: .8%;
+  min-height: 500px; }
   .homepage #homeleft {
     position: relative;
     float: left;
@@ -238,7 +245,6 @@ hr {
     .homepage #homeright #topBlock {
       height: 50%; }
       .homepage #homeright #topBlock #topLeft {
-        padding: 1em 6% 0 6%;
         height: 100%;
         width: 49%;
         margin-right: 1%;
@@ -248,6 +254,9 @@ hr {
         -webkit-background-size: cover;
         background-size: cover;
         float: left; }
+        .homepage #homeright #topBlock #topLeft #topLeftLayer {
+          height: 100%;
+          background-color: rgba(60, 60, 60, 0.69); }
       .homepage #homeright #topBlock #topRight {
         height: 100%;
         width: 49%;
@@ -269,7 +278,7 @@ hr {
   width: 100%;
   left: 0;
   bottom: 0;
-  height: 150px;
+  height: 250px;
   background-color: #393d47;
   color: #ECECEC;
   text-align: center;
@@ -277,7 +286,7 @@ hr {
   padding-right: 100px; }
   .footer .footer-divider {
     margin-top: 0;
-    margin-bottom: 20px;
+    margin-bottom: 80px;
     border-color: rgba(255, 255, 255, 0.2); }
   .footer .footerTitle {
     font-size: 14px;

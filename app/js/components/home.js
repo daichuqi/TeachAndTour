@@ -41,7 +41,9 @@ class Home extends React.Component {
 
         <div id='homeright'>
           <div id='topBlock'>
-            <div id='topLeft'></div>
+            <div id='topLeft'>
+              <div id='topLeftLayer'></div>
+            </div>
             <div id='topRight'></div>
           </div>
           <div id='buttonBlock'></div>
