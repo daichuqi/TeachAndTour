@@ -9,7 +9,7 @@ import UserStore from '../stores/userProfileStore';
 
 
 var img =
-['../assets/images/bg0.jpg',
+['../assets/images/bg5.jpg',
 '../assets/images/bg6.jpg',
 '../assets/images/bg7.jpg',
 '../assets/images/bg8.jpg',

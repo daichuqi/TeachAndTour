@@ -3,6 +3,12 @@ import React from 'react';
 import Waypoint from 'react-waypoint';
 import HomeAction from '../actions/homeActionCreators'
 
+var whoStyle = {
+    'background': 'url("../assets/images/bg1.jpg") no-repeat center center;',
+    'background-size': 'cover;'
+};
+
+
 class Whoweare extends React.Component {
   constructor() {
     super();
@@ -17,11 +23,11 @@ class Whoweare extends React.Component {
   }
   render() {
     return (
-      <div className='page whoweare'>
+      <div className='page section'>
         <Waypoint onEnter={this._handleWaypointEnter} onLeave={this._handleWaypointLeave} threshold={0.3} />
-        <div id='whoweareBanner'>
-          <div id='whoweareBannerTitle'>Who We Are</div>
-          <div id='whoweareBannerSubtitle'>Teach & Tour is a platform for foreign teachers</div>
+        <div className='sectionBanner' style={whoStyle}>
+          <div className='sectionBannerTitle'>Who We Are</div>
+          <div className='sectionBannerSubtitle'>Teach & Tour is a platform for foreign teachers</div>
         </div>
       </div>
     )

@@ -3,6 +3,11 @@ import React from 'react';
 import Waypoint from 'react-waypoint';
 import HomeAction from '../actions/homeActionCreators'
 
+var whatStyle = {
+    'background': 'url("../assets/images/bg2.jpg") no-repeat center center;',
+    'background-size': 'cover;'
+};
+
 class Whatwedo extends React.Component {
   constructor() {
     super();
@@ -17,10 +22,11 @@ class Whatwedo extends React.Component {
   }
   render() {
     return (
-      <div className='page'>
+      <div className='page section'>
         <Waypoint onEnter={this._handleWaypointEnter} onLeave={this._handleWaypointLeave} threshold={0.3} />
-        <div className='tempBigTitle'>
-          What We Do
+        <div className='sectionBanner' style={whatStyle}>
+          <div className='sectionBannerTitle'>What We Do</div>
+          <div className='sectionBannerSubtitle'>What We Do What We Do What We Do</div>
         </div>
       </div>
     )

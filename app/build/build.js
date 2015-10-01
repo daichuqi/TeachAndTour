@@ -491,7 +491,7 @@ var _storesUserProfileStore = require('../stores/userProfileStore');
 
 var _storesUserProfileStore2 = _interopRequireDefault(_storesUserProfileStore);
 
-var img = ['../assets/images/bg0.jpg', '../assets/images/bg6.jpg', '../assets/images/bg7.jpg', '../assets/images/bg8.jpg'];
+var img = ['../assets/images/bg5.jpg', '../assets/images/bg6.jpg', '../assets/images/bg7.jpg', '../assets/images/bg8.jpg'];
 
 var divStyle = {
   backgroundImage: 'url(' + img[0] + ')'
@@ -1533,6 +1533,11 @@ var _actionsHomeActionCreators = require('../actions/homeActionCreators');
 
 var _actionsHomeActionCreators2 = _interopRequireDefault(_actionsHomeActionCreators);
 
+var whatStyle = {
+  'background': 'url("../assets/images/bg2.jpg") no-repeat center center;',
+  'background-size': 'cover;'
+};
+
 var Whatwedo = (function (_React$Component) {
   _inherits(Whatwedo, _React$Component);
 
@@ -1559,12 +1564,21 @@ var Whatwedo = (function (_React$Component) {
     value: function render() {
       return _react2['default'].createElement(
         'div',
-        { className: 'page' },
+        { className: 'page section' },
         _react2['default'].createElement(_reactWaypoint2['default'], { onEnter: this._handleWaypointEnter, onLeave: this._handleWaypointLeave, threshold: 0.3 }),
         _react2['default'].createElement(
           'div',
-          { className: 'tempBigTitle' },
-          'What We Do'
+          { className: 'sectionBanner', style: whatStyle },
+          _react2['default'].createElement(
+            'div',
+            { className: 'sectionBannerTitle' },
+            'What We Do'
+          ),
+          _react2['default'].createElement(
+            'div',
+            { className: 'sectionBannerSubtitle' },
+            'What We Do What We Do What We Do'
+          )
         )
       );
     }
@@ -1604,6 +1618,11 @@ var _actionsHomeActionCreators = require('../actions/homeActionCreators');
 
 var _actionsHomeActionCreators2 = _interopRequireDefault(_actionsHomeActionCreators);
 
+var whoStyle = {
+  'background': 'url("../assets/images/bg1.jpg") no-repeat center center;',
+  'background-size': 'cover;'
+};
+
 var Whoweare = (function (_React$Component) {
   _inherits(Whoweare, _React$Component);
 
@@ -1630,19 +1649,19 @@ var Whoweare = (function (_React$Component) {
     value: function render() {
       return _react2['default'].createElement(
         'div',
-        { className: 'page whoweare' },
+        { className: 'page section' },
         _react2['default'].createElement(_reactWaypoint2['default'], { onEnter: this._handleWaypointEnter, onLeave: this._handleWaypointLeave, threshold: 0.3 }),
         _react2['default'].createElement(
           'div',
-          { id: 'whoweareBanner' },
+          { className: 'sectionBanner', style: whoStyle },
           _react2['default'].createElement(
             'div',
-            { id: 'whoweareBannerTitle' },
+            { className: 'sectionBannerTitle' },
             'Who We Are'
           ),
           _react2['default'].createElement(
             'div',
-            { id: 'whoweareBannerSubtitle' },
+            { className: 'sectionBannerSubtitle' },
             'Teach & Tour is a platform for foreign teachers'
           )
         )
