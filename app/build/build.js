@@ -1630,12 +1630,21 @@ var Whoweare = (function (_React$Component) {
     value: function render() {
       return _react2['default'].createElement(
         'div',
-        { className: 'page' },
+        { className: 'page whoweare' },
         _react2['default'].createElement(_reactWaypoint2['default'], { onEnter: this._handleWaypointEnter, onLeave: this._handleWaypointLeave, threshold: 0.3 }),
         _react2['default'].createElement(
           'div',
-          { className: 'tempBigTitle' },
-          'Who we are'
+          { id: 'whoweareBanner' },
+          _react2['default'].createElement(
+            'div',
+            { id: 'whoweareBannerTitle' },
+            'Who We Are'
+          ),
+          _react2['default'].createElement(
+            'div',
+            { id: 'whoweareBannerSubtitle' },
+            'Teach & Tour is a platform for foreign teachers'
+          )
         )
       );
     }

@@ -17,10 +17,11 @@ class Whoweare extends React.Component {
   }
   render() {
     return (
-      <div className='page'>
+      <div className='page whoweare'>
         <Waypoint onEnter={this._handleWaypointEnter} onLeave={this._handleWaypointLeave} threshold={0.3} />
-        <div className='tempBigTitle'>
-          Who we are
+        <div id='whoweareBanner'>
+          <div id='whoweareBannerTitle'>Who We Are</div>
+          <div id='whoweareBannerSubtitle'>Teach & Tour is a platform for foreign teachers</div>
         </div>
       </div>
     )

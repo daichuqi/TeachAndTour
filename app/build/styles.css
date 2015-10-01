@@ -216,7 +216,7 @@ hr {
 .homepage {
   height: 100%;
   width: 100%;
-  padding-top: 170px;
+  padding-top: 175px;
   margin-top: -110px;
   padding-bottom: .8%;
   min-height: 500px; }
@@ -273,6 +273,36 @@ hr {
         transition: background-position, 0.2s, ease;
         position: relative;
         float: left; }
+
+.whoweare {
+  margin-top: 65px; }
+  .whoweare #whoweareBanner {
+    position: relative;
+    float: left;
+    width: 98%;
+    height: 65%;
+    min-height: 350px;
+    margin: 0 0.5% 0 0.5%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background: url("../assets/images/bg3.jpg") no-repeat center center;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    opacity: 1; }
+  .whoweare #whoweareBannerTitle {
+    position: absolute;
+    font-size: 70px;
+    top: 2px;
+    left: 30px;
+    color: #fff; }
+  .whoweare #whoweareBannerSubtitle {
+    position: absolute;
+    font-size: 30px;
+    top: 90px;
+    left: 30px;
+    color: #fff; }
 
 .footer {
   width: 100%;
