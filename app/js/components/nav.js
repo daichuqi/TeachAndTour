@@ -45,10 +45,10 @@ class Nav extends React.Component {
             <LoginButton className="loginButton"/>
             <div className="navButtonGroup">
               <Router.Link to="home"><button className="navButton2 navButton4 fa fa-home"></button></Router.Link>
-              <Router.Link to="home"><button className="navButton2">home</button></Router.Link>
-              <Router.Link to="maps"><button className="navButton2">maps</button></Router.Link>
-              <Router.Link to="news"><button className="navButton2">news</button></Router.Link>
-              <Router.Link to="join-us"><button className="navButton2 navButton3">join</button></Router.Link>
+              <Router.Link to="who"><button className="navButton2">WHO WE ARE</button></Router.Link>
+              <Router.Link to="what"><button className="navButton2">WHAT WE DO</button></Router.Link>
+              <Router.Link to="join-us"><button className="navButton2">JOIN US</button></Router.Link>
+              <Router.Link to="news"><button className="navButton2 navButton3">CONTACT US</button></Router.Link>
             </div>
           </div>
         </div>
@@ -56,9 +56,10 @@ class Nav extends React.Component {
         <div className={this.state.header ? 'hideSmallHeader':'displaySmallHeader'}>
           <div className="navButtonGroup2">
               <Router.Link to="home"><button className="navButton">home</button></Router.Link>
-              <Router.Link to="maps"><button className="navButton">maps</button></Router.Link>
-              <Router.Link to="news"><button className="navButton">news</button></Router.Link>
-              <Router.Link to="join-us"><button className="navButton">join</button></Router.Link>
+              <Router.Link to="who"><button className="navButton">WHO WE ARE</button></Router.Link>
+              <Router.Link to="what"><button className="navButton">WHAT WE DO</button></Router.Link>
+              <Router.Link to="join-us"><button className="navButton">JOIN US</button></Router.Link>
+              <Router.Link to="news"><button className="navButton">CONTACT US</button></Router.Link>
           </div>
         </div>
 

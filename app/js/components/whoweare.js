@@ -3,7 +3,7 @@ import React from 'react';
 import Waypoint from 'react-waypoint';
 import HomeAction from '../actions/homeActionCreators'
 
-class Maps extends React.Component {
+class Whoweare extends React.Component {
   constructor() {
     super();
     this._handleWaypointEnter = this._handleWaypointEnter.bind(this);
@@ -20,11 +20,11 @@ class Maps extends React.Component {
       <div className='page'>
         <Waypoint onEnter={this._handleWaypointEnter} onLeave={this._handleWaypointLeave} threshold={0.3} />
         <div className='tempBigTitle'>
-          this is page3
+          Who we are
         </div>
       </div>
     )
   }
 }
 
-export default Maps;
+export default Whoweare;

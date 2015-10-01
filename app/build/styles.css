@@ -109,7 +109,7 @@ hr {
 .navButton {
   border-width: 0;
   padding: 10px;
-  width: 100px;
+  width: 150px;
   color: #C0CAD2;
   background-color: rgba(255, 255, 255, 0);
   text-transform: capitalize; }
@@ -119,10 +119,10 @@ hr {
   color: white; }
 
 .navButton2 {
-  height: 35px;
+  height: 45px;
   font-size: 14px;
   border-width: 0;
-  padding: 10px 80px 10px 0px;
+  padding: 17px 60px 10px 0px;
   width: 20%;
   margin: 0px 0px 0px 0.15%;
   color: #5D5D5D;
@@ -131,11 +131,11 @@ hr {
 
 .navButton3 {
   width: 32%;
-  padding: 10px 200px 5px 0px; }
+  padding: 10px 150px 5px 0px; }
 
 .navButton4 {
   font-size: 25px;
-  padding: 2px 0px 5px 0px;
+  padding: 5px 0px 5px 0px;
   width: 50px;
   margin-left: 5px; }
 
@@ -216,7 +216,7 @@ hr {
 .homepage {
   height: 100%;
   width: 100%;
-  padding-top: 160px;
+  padding-top: 170px;
   margin-top: -110px;
   padding-bottom: .8%;
   min-height: 500px; }
