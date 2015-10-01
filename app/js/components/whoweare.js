@@ -4,7 +4,7 @@ import Waypoint from 'react-waypoint';
 import HomeAction from '../actions/homeActionCreators'
 
 var whoStyle = {
-    'background': 'url("../assets/images/bg1.jpg") no-repeat center center;',
+    'background': 'url("../assets/images/bg1.jpg") no-repeat center center',
     'background-size': 'cover;'
 };
 
@@ -12,8 +12,12 @@ var whoStyle = {
 class Whoweare extends React.Component {
   constructor() {
     super();
+    this.componentDidMount = this.componentDidMount.bind(this);
     this._handleWaypointEnter = this._handleWaypointEnter.bind(this);
     this._handleWaypointLeave = this._handleWaypointLeave.bind(this);
+  }
+  componentDidMount(){
+    HomeAction.SetNavActive('who');
   }
   _handleWaypointEnter(){
     HomeAction.resizeHeader(true);

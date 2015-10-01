@@ -22,8 +22,12 @@ var divStyle = {
 class Home extends React.Component {
   constructor() {
     super();
+    this.componentDidMount = this.componentDidMount.bind(this);
     this._handleWaypointEnter = this._handleWaypointEnter.bind(this);
     this._handleWaypointLeave = this._handleWaypointLeave.bind(this);
+  }
+  componentDidMount(){
+    HomeAction.SetNavActive('home');
   }
   _handleWaypointEnter(){
     HomeAction.resizeHeader(true);

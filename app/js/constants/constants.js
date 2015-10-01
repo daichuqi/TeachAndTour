@@ -6,7 +6,8 @@ const constants = {
       CLOSE_LOGIN_MODAL:null,
       SIGNUP:null,
       LOGIN:null,
-      LOGOUT:null
+      LOGOUT:null,
+      NAVACTIVE:null
   })
 };
 

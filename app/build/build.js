@@ -173,6 +173,13 @@ exports['default'] = {
       type: ActionType.RESIZEHEADER,
       headerState: headerState
     });
+  },
+
+  SetNavActive: function SetNavActive(NavName) {
+    _dispatcherDispatcher2['default'].dispatch({
+      type: ActionType.NAVACTIVE,
+      NavName: NavName
+    });
   }
 
 };
@@ -504,11 +511,17 @@ var Home = (function (_React$Component) {
     _classCallCheck(this, Home);
 
     _get(Object.getPrototypeOf(Home.prototype), 'constructor', this).call(this);
+    this.componentDidMount = this.componentDidMount.bind(this);
     this._handleWaypointEnter = this._handleWaypointEnter.bind(this);
     this._handleWaypointLeave = this._handleWaypointLeave.bind(this);
   }
 
   _createClass(Home, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      _actionsHomeActionCreators2['default'].SetNavActive('home');
+    }
+  }, {
     key: '_handleWaypointEnter',
     value: function _handleWaypointEnter() {
       _actionsHomeActionCreators2['default'].resizeHeader(true);
@@ -588,9 +601,15 @@ var User = (function (_React$Component) {
     _get(Object.getPrototypeOf(User.prototype), 'constructor', this).call(this);
     this._handleWaypointEnter = this._handleWaypointEnter.bind(this);
     this._handleWaypointLeave = this._handleWaypointLeave.bind(this);
+    this.componentDidMount = this.componentDidMount.bind(this);
   }
 
   _createClass(User, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      _actionsHomeActionCreators2['default'].SetNavActive('join');
+    }
+  }, {
     key: '_handleWaypointEnter',
     value: function _handleWaypointEnter() {
       _actionsHomeActionCreators2['default'].resizeHeader(true);
@@ -1146,12 +1165,14 @@ var Nav = (function (_React$Component) {
     _classCallCheck(this, Nav);
 
     _get(Object.getPrototypeOf(Nav.prototype), 'constructor', this).call(this);
+    this.changeNavState = this.changeNavState.bind(this);
     this.changeHeaderState = this.changeHeaderState.bind(this);
     this.componentDidMount = this.componentDidMount.bind(this);
     this.componentWillUnmount = this.componentWillUnmount.bind(this);
     this.state = {
       bigheader: true,
-      header: 'hideSmallHeader'
+      header: 'hideSmallHeader',
+      activeNav: null
     };
   }
 
@@ -1159,16 +1180,23 @@ var Nav = (function (_React$Component) {
     key: 'componentDidMount',
     value: function componentDidMount() {
       _storesHomeStore2['default'].addChangeListener(this.changeHeaderState);
+      _storesHomeStore2['default'].addNavActiveListener(this.changeNavState);
     }
   }, {
     key: 'componentWillUnmount',
     value: function componentWillUnmount() {
       _storesHomeStore2['default'].removeChangeListener(this.changeHeaderState);
+      _storesHomeStore2['default'].removeNavActiveListener(this.changeNavState);
     }
   }, {
     key: 'changeHeaderState',
     value: function changeHeaderState() {
       this.setState({ header: _storesHomeStore2['default'].getHeaderState() });
+    }
+  }, {
+    key: 'changeNavState',
+    value: function changeNavState() {
+      this.setState({ activeNav: _storesHomeStore2['default'].getNavState() });
     }
   }, {
     key: 'render',
@@ -1219,7 +1247,7 @@ var Nav = (function (_React$Component) {
                 { to: 'who' },
                 _react2['default'].createElement(
                   'button',
-                  { className: 'navButton2' },
+                  { className: this.state.activeNav === 'who' ? 'navButton2 activeNav' : 'navButton2' },
                   'WHO WE ARE'
                 )
               ),
@@ -1228,7 +1256,7 @@ var Nav = (function (_React$Component) {
                 { to: 'what' },
                 _react2['default'].createElement(
                   'button',
-                  { className: 'navButton2' },
+                  { className: this.state.activeNav === 'what' ? 'navButton2 activeNav' : 'navButton2' },
                   'WHAT WE DO'
                 )
               ),
@@ -1237,7 +1265,7 @@ var Nav = (function (_React$Component) {
                 { to: 'join-us' },
                 _react2['default'].createElement(
                   'button',
-                  { className: 'navButton2' },
+                  { className: this.state.activeNav === 'join' ? 'navButton2 activeNav' : 'navButton2' },
                   'JOIN US'
                 )
               ),
@@ -1246,7 +1274,7 @@ var Nav = (function (_React$Component) {
                 { to: 'news' },
                 _react2['default'].createElement(
                   'button',
-                  { className: 'navButton2 navButton3' },
+                  { className: this.state.activeNav === 'contact' ? 'navButton2 navButton3 activeNav' : 'navButton2 navButton3' },
                   'CONTACT US'
                 )
               )
@@ -1369,6 +1397,7 @@ var News = (function (_React$Component) {
     key: 'componentDidMount',
     value: function componentDidMount() {
       this.setState({ username: _storesUserProfileStore2['default'].getCookieName() });
+      _actionsHomeActionCreators2['default'].SetNavActive('contact');
     }
   }, {
     key: '_handleWaypointEnter',
@@ -1534,7 +1563,7 @@ var _actionsHomeActionCreators = require('../actions/homeActionCreators');
 var _actionsHomeActionCreators2 = _interopRequireDefault(_actionsHomeActionCreators);
 
 var whatStyle = {
-  'background': 'url("../assets/images/bg2.jpg") no-repeat center center;',
+  'background': 'url("../assets/images/bg2.jpg") no-repeat center center',
   'background-size': 'cover;'
 };
 
@@ -1547,9 +1576,15 @@ var Whatwedo = (function (_React$Component) {
     _get(Object.getPrototypeOf(Whatwedo.prototype), 'constructor', this).call(this);
     this._handleWaypointEnter = this._handleWaypointEnter.bind(this);
     this._handleWaypointLeave = this._handleWaypointLeave.bind(this);
+    this.componentDidMount = this.componentDidMount.bind(this);
   }
 
   _createClass(Whatwedo, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      _actionsHomeActionCreators2['default'].SetNavActive('what');
+    }
+  }, {
     key: '_handleWaypointEnter',
     value: function _handleWaypointEnter() {
       _actionsHomeActionCreators2['default'].resizeHeader(true);
@@ -1619,7 +1654,7 @@ var _actionsHomeActionCreators = require('../actions/homeActionCreators');
 var _actionsHomeActionCreators2 = _interopRequireDefault(_actionsHomeActionCreators);
 
 var whoStyle = {
-  'background': 'url("../assets/images/bg1.jpg") no-repeat center center;',
+  'background': 'url("../assets/images/bg1.jpg") no-repeat center center',
   'background-size': 'cover;'
 };
 
@@ -1630,11 +1665,17 @@ var Whoweare = (function (_React$Component) {
     _classCallCheck(this, Whoweare);
 
     _get(Object.getPrototypeOf(Whoweare.prototype), 'constructor', this).call(this);
+    this.componentDidMount = this.componentDidMount.bind(this);
     this._handleWaypointEnter = this._handleWaypointEnter.bind(this);
     this._handleWaypointLeave = this._handleWaypointLeave.bind(this);
   }
 
   _createClass(Whoweare, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      _actionsHomeActionCreators2['default'].SetNavActive('who');
+    }
+  }, {
     key: '_handleWaypointEnter',
     value: function _handleWaypointEnter() {
       _actionsHomeActionCreators2['default'].resizeHeader(true);
@@ -1694,7 +1735,8 @@ var constants = {
     CLOSE_LOGIN_MODAL: null,
     SIGNUP: null,
     LOGIN: null,
-    LOGOUT: null
+    LOGOUT: null,
+    NAVACTIVE: null
   })
 };
 
@@ -1742,25 +1784,43 @@ var _objectAssign2 = _interopRequireDefault(_objectAssign);
 
 var ActionType = _constantsConstants2['default'].ActionTypes;
 var CHANGE_EVENT = 'change';
+var CHANGE_NAV_ACTIVE = 'nav_active';
 
 var _header = true;
+var _nav_active = 'home';
 
 var setHeaderState = function setHeaderState(headerState) {
   _header = headerState;
+};
+
+var setNavState = function setNavState(NavName) {
+  _nav_active = NavName;
 };
 
 var HomeStore = (0, _objectAssign2['default'])({}, _events2['default'].prototype, {
   emitChange: function emitChange() {
     this.emit(CHANGE_EVENT);
   },
+  emitNavActive: function emitNavActive() {
+    this.emit(CHANGE_NAV_ACTIVE);
+  },
   addChangeListener: function addChangeListener(callback) {
     this.on(CHANGE_EVENT, callback);
+  },
+  addNavActiveListener: function addNavActiveListener(callback) {
+    this.on(CHANGE_NAV_ACTIVE, callback);
   },
   removeChangeListener: function removeChangeListener(callback) {
     this.removeListener(CHANGE_EVENT, callback);
   },
+  removeNavActiveListener: function removeNavActiveListener(callback) {
+    this.removeListener(CHANGE_NAV_ACTIVE, callback);
+  },
   getHeaderState: function getHeaderState() {
     return _header;
+  },
+  getNavState: function getNavState() {
+    return _nav_active;
   }
 });
 
@@ -1769,6 +1829,11 @@ HomeStore.dispatchToken = _dispatcherDispatcherJs2['default'].register(function 
     case ActionType.RESIZEHEADER:
       setHeaderState(payload.headerState);
       HomeStore.emitChange();
+      break;
+
+    case ActionType.NAVACTIVE:
+      setNavState(payload.NavName);
+      HomeStore.emitNavActive();
       break;
 
     default:

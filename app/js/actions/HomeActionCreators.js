@@ -9,6 +9,13 @@ export default {
       type: ActionType.RESIZEHEADER,
       headerState:headerState
     });
+  },
+
+  SetNavActive(NavName){
+    Dispatcher.dispatch({
+      type: ActionType.NAVACTIVE,
+      NavName:NavName
+    });
   }
 
 }

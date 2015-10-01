@@ -13,22 +13,29 @@ import UserActions from '../actions/UserActionCreators';
 class Nav extends React.Component {
   constructor() {
     super();
+    this.changeNavState = this.changeNavState.bind(this);
     this.changeHeaderState = this.changeHeaderState.bind(this);
     this.componentDidMount = this.componentDidMount.bind(this);
     this.componentWillUnmount = this.componentWillUnmount.bind(this);
     this.state = {
       bigheader:true,
-      header:'hideSmallHeader'
+      header:'hideSmallHeader',
+      activeNav:null
     }
   }
   componentDidMount() {
     HomeStore.addChangeListener(this.changeHeaderState);
+    HomeStore.addNavActiveListener(this.changeNavState);
   }
   componentWillUnmount() {
     HomeStore.removeChangeListener(this.changeHeaderState);
+    HomeStore.removeNavActiveListener(this.changeNavState);
   }
   changeHeaderState(){
     this.setState({header: HomeStore.getHeaderState()});
+  }
+  changeNavState(){
+    this.setState({activeNav: HomeStore.getNavState()});
   }
   render() {
     return (
@@ -45,10 +52,10 @@ class Nav extends React.Component {
             <LoginButton className="loginButton"/>
             <div className="navButtonGroup">
               <Router.Link to="home"><button className="navButton2 navButton4 fa fa-home"></button></Router.Link>
-              <Router.Link to="who"><button className="navButton2">WHO WE ARE</button></Router.Link>
-              <Router.Link to="what"><button className="navButton2">WHAT WE DO</button></Router.Link>
-              <Router.Link to="join-us"><button className="navButton2">JOIN US</button></Router.Link>
-              <Router.Link to="news"><button className="navButton2 navButton3">CONTACT US</button></Router.Link>
+              <Router.Link to="who"><button className={this.state.activeNav === 'who' ? 'navButton2 activeNav' : 'navButton2'}>WHO WE ARE</button></Router.Link>
+              <Router.Link to="what"><button className={this.state.activeNav === 'what' ? 'navButton2 activeNav' : 'navButton2'}>WHAT WE DO</button></Router.Link>
+              <Router.Link to="join-us"><button className={this.state.activeNav === 'join' ? 'navButton2 activeNav' : 'navButton2'}>JOIN US</button></Router.Link>
+              <Router.Link to="news"><button className={this.state.activeNav === 'contact' ? 'navButton2 navButton3 activeNav' : 'navButton2 navButton3'}>CONTACT US</button></Router.Link>
             </div>
           </div>
         </div>

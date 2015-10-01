@@ -8,8 +8,11 @@ class User extends React.Component {
     super();
     this._handleWaypointEnter = this._handleWaypointEnter.bind(this);
     this._handleWaypointLeave = this._handleWaypointLeave.bind(this);
+    this.componentDidMount = this.componentDidMount.bind(this);
   }
-
+  componentDidMount(){
+    HomeAction.SetNavActive('join');
+  }
   _handleWaypointEnter(){
     HomeAction.resizeHeader(true);
   }

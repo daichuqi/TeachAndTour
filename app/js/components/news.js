@@ -16,6 +16,7 @@ class News extends React.Component {
   }
   componentDidMount(){
     this.setState({username: UserProfile.getCookieName()});
+    HomeAction.SetNavActive('contact');
   }
   _handleWaypointEnter(){
     HomeAction.resizeHeader(true);

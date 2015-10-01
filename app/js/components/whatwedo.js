@@ -4,7 +4,7 @@ import Waypoint from 'react-waypoint';
 import HomeAction from '../actions/homeActionCreators'
 
 var whatStyle = {
-    'background': 'url("../assets/images/bg2.jpg") no-repeat center center;',
+    'background': 'url("../assets/images/bg2.jpg") no-repeat center center',
     'background-size': 'cover;'
 };
 
@@ -13,6 +13,10 @@ class Whatwedo extends React.Component {
     super();
     this._handleWaypointEnter = this._handleWaypointEnter.bind(this);
     this._handleWaypointLeave = this._handleWaypointLeave.bind(this);
+    this.componentDidMount = this.componentDidMount.bind(this);
+  }
+  componentDidMount(){
+    HomeAction.SetNavActive('what');
   }
   _handleWaypointEnter(){
     HomeAction.resizeHeader(true);
