@@ -534,7 +534,8 @@ var Home = (function (_React$Component) {
             { id: 'topBlock' },
             _react2['default'].createElement('div', { id: 'topLeft' }),
             _react2['default'].createElement('div', { id: 'topRight' })
-          )
+          ),
+          _react2['default'].createElement('div', { id: 'buttonBlock' })
         )
       );
     }

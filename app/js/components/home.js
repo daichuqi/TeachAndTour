@@ -37,14 +37,14 @@ class Home extends React.Component {
       <div className="homepage">
         <Waypoint onEnter={this._handleWaypointEnter} onLeave={this._handleWaypointLeave} threshold={0.3} />
 
-        <div id='homeleft' style={divStyle}>
-        </div>
+        <div id='homeleft' style={divStyle}></div>
 
         <div id='homeright'>
           <div id='topBlock'>
             <div id='topLeft'></div>
             <div id='topRight'></div>
           </div>
+          <div id='buttonBlock'></div>
         </div>
 
       </div>
